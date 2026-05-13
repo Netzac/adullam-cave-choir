@@ -1,0 +1,66 @@
+{
+  "site": {
+    "name": "Chorale Adullam Cave",
+    "tagline": "de la Caverne à la Scène"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "programs": "Programmes",
+    "workshops": "Ateliers",
+    "gallery": "Galerie",
+    "equipment": "Équipement",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "cta": {
+    "applyNow": "Postuler",
+    "learnMore": "En savoir plus",
+    "getInTouch": "Nous contacter",
+    "bookWorkshop": "Réserver un atelier",
+    "viewAll": "Tout voir",
+    "watchVideo": "Voir la vidéo"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "empty": "Rien ici pour l’instant",
+    "search": "Rechercher",
+    "submit": "Envoyer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "readMore": "Lire la suite",
+    "language": "Langue",
+    "theme": "Thème",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "themeSystem": "Système"
+  },
+  "footer": {
+    "quickLinks": "Liens rapides",
+    "programs": "Programmes",
+    "services": "Services",
+    "connect": "Nous suivre",
+    "rights": "Tous droits réservés.",
+    "madeIn": "Fait avec soin à Accra, Ghana"
+  },
+  "programs": {
+    "choristers": "Formation des jeunes choristes",
+    "worship": "Chant de louange",
+    "instruments": "Formation aux instruments"
+  },
+  "services": {
+    "equipmentInstall": "Installation d’équipement"
+  },
+  "contact": {
+    "addressLabel": "Adresse",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "followUs": "Suivez-nous"
+  }
+}

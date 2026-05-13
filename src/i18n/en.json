@@ -1,0 +1,66 @@
+{
+  "site": {
+    "name": "Adullam Cave Choir",
+    "tagline": "from the Cave to the Stage"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "workshops": "Workshops",
+    "gallery": "Gallery",
+    "equipment": "Equipment",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "cta": {
+    "applyNow": "Apply Now",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "bookWorkshop": "Book a Workshop",
+    "viewAll": "View All",
+    "watchVideo": "Watch Video"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "empty": "Nothing here yet",
+    "search": "Search",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "next": "Next",
+    "previous": "Previous",
+    "readMore": "Read more",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "programs": "Programs",
+    "services": "Services",
+    "connect": "Connect",
+    "rights": "All rights reserved.",
+    "madeIn": "Made with care in Accra, Ghana"
+  },
+  "programs": {
+    "choristers": "Young Choristers Training",
+    "worship": "Worship Singing",
+    "instruments": "Instrument Training"
+  },
+  "services": {
+    "equipmentInstall": "Equipment Installation"
+  },
+  "contact": {
+    "addressLabel": "Address",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "followUs": "Follow us"
+  }
+}
