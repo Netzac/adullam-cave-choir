@@ -8,7 +8,10 @@
       "Bash(npm view *)",
       "Bash(npx tsc *)",
       "Bash(git config *)",
-      "Bash(git --version)"
+      "Bash(git --version)",
+      "Bash(npx next *)",
+      "Bash(git add *)",
+      "Bash(git rm *)"
     ]
   }
 }

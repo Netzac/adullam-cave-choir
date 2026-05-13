@@ -8,25 +8,34 @@
     "about": "À propos",
     "programs": "Programmes",
     "workshops": "Ateliers",
+    "events": "Événements",
     "gallery": "Galerie",
     "equipment": "Équipement",
     "contact": "Contact",
+    "donate": "Faire un don",
+    "howToApply": "Comment postuler",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu"
   },
   "cta": {
     "applyNow": "Postuler",
     "learnMore": "En savoir plus",
+    "watchStory": "Voir notre histoire",
     "getInTouch": "Nous contacter",
     "bookWorkshop": "Réserver un atelier",
     "viewAll": "Tout voir",
-    "watchVideo": "Voir la vidéo"
+    "watchVideo": "Voir la vidéo",
+    "donate": "Soutenir la vision",
+    "requestWorkshop": "Demander un atelier",
+    "requestService": "Demander un service",
+    "applyProgram": "Postuler pour ce programme",
+    "applyWorkshop": "Postuler pour l'atelier"
   },
   "common": {
     "loading": "Chargement…",
     "error": "Une erreur est survenue",
     "retry": "Réessayer",
-    "empty": "Rien ici pour l’instant",
+    "empty": "Rien ici pour l'instant",
     "search": "Rechercher",
     "submit": "Envoyer",
     "cancel": "Annuler",
@@ -34,12 +43,17 @@
     "save": "Enregistrer",
     "next": "Suivant",
     "previous": "Précédent",
+    "back": "Retour",
+    "continue": "Continuer",
     "readMore": "Lire la suite",
     "language": "Langue",
     "theme": "Thème",
     "themeLight": "Clair",
     "themeDark": "Sombre",
-    "themeSystem": "Système"
+    "themeSystem": "Système",
+    "step": "Étape",
+    "of": "sur",
+    "optional": "Facultatif"
   },
   "footer": {
     "quickLinks": "Liens rapides",
@@ -55,12 +69,402 @@
     "instruments": "Formation aux instruments"
   },
   "services": {
-    "equipmentInstall": "Installation d’équipement"
+    "equipmentInstall": "Installation d'équipement"
   },
   "contact": {
     "addressLabel": "Adresse",
     "emailLabel": "E-mail",
     "phoneLabel": "Téléphone",
     "followUs": "Suivez-nous"
-  }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Accra, Ghana",
+      "headline": "de la Caverne à la Scène",
+      "subheadline": "Nous formons la prochaine génération de choristes, de chefs de louange et d'instrumentistes — et équipons les églises du Ghana du son du ciel.",
+      "scrollHint": "Faites défiler"
+    },
+    "mission": {
+      "title": "Un mouvement de louange",
+      "yearsLabel": "Années d'excellence",
+      "choristersLabel": "Choristes formés",
+      "churchesLabel": "Églises servies"
+    },
+    "about": {
+      "eyebrow": "Qui nous sommes",
+      "title": "Une école du son, un sanctuaire du chant",
+      "p1": "La Chorale Adullam Cave a été forgée dans la préparation silencieuse — la caverne avant la scène. Nous sommes un ministère enraciné au Ghana qui forme jeunes voix, instrumentistes et chefs de louange.",
+      "p2": "Des répétitions aux installations à travers le pays, chaque note et chaque enceinte servent la louange authentique."
+    },
+    "programs": {
+      "eyebrow": "Ce que nous faisons",
+      "title": "Des chemins pour chaque appel",
+      "subtitle": "Choisissez le parcours qui correspond à votre don."
+    },
+    "events": {
+      "eyebrow": "À venir",
+      "title": "Ateliers & événements",
+      "subtitle": "Rejoignez-nous en présentiel, en ligne, ou invitez-nous chez vous.",
+      "empty": "Aucun événement à venir pour le moment."
+    },
+    "gallery": {
+      "eyebrow": "Moments",
+      "title": "Saisis dans la louange",
+      "subtitle": "Aperçus des répétitions, performances et installations."
+    },
+    "equipment": {
+      "eyebrow": "Nous équipons les églises",
+      "title": "Un son au service de la louange",
+      "subtitle": "Des enceintes aux claviers — nous installons, configurons et formons votre équipe."
+    },
+    "donate": {
+      "eyebrow": "Semez dans le son",
+      "title": "Soutenez la vision",
+      "subtitle": "Chaque don forme un choriste, équipe une église et envoie la louange plus loin."
+    },
+    "testimonials": {
+      "eyebrow": "Témoignages",
+      "title": "Ce qu'ils en disent"
+    },
+    "blog": {
+      "eyebrow": "Récent",
+      "title": "Sur le blog",
+      "subtitle": "Réflexions, leçons et nouvelles."
+    },
+    "contact": {
+      "title": "Parlons",
+      "subtitle": "Une question, une prière, une invitation ? Nous écoutons."
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "À propos",
+      "title": "Né dans la caverne. Bâti pour la scène.",
+      "subtitle": "Une histoire de préparation silencieuse, de dévotion brute et d'un appel inarrêtable."
+    },
+    "story": {
+      "title": "Notre histoire",
+      "p1": "Bien avant les lumières, il y avait une caverne — un lieu de consécration où les voix se forgent.",
+      "p2": "Ce qui a commencé à Accra est devenu un mouvement qui forme et équipe à travers le Ghana et au-delà."
+    },
+    "vmv": {
+      "title": "Vision, Mission & Valeurs",
+      "visionTitle": "Vision",
+      "visionBody": "Susciter une génération d'adorateurs dont la vie et le son pointent vers le Roi.",
+      "missionTitle": "Mission",
+      "missionBody": "Former, encadrer et équiper choristes, chefs de louange et églises avec excellence et intégrité.",
+      "valuesTitle": "Valeurs",
+      "valuesBody": "Révérence. Discipline. Excellence. Service. Mentorat."
+    },
+    "philosophy": {
+      "title": "Notre philosophie de formation",
+      "p1": "La grande louange déborde de la dévotion cachée. Nous enseignons l'art et le cœur ensemble.",
+      "p2": "Chaque programme repose sur trois rails : compétence, mentorat, service de l'église locale."
+    },
+    "equipment": {
+      "title": "Nous équipons aussi les églises",
+      "body": "Nous installons l'audio, configurons la scène et formons vos équipes."
+    },
+    "leadership": {
+      "title": "Direction",
+      "subtitle": "Les bergers derrière le son."
+    },
+    "cta": {
+      "title": "Prêt à entrer dans votre son ?",
+      "body": "Les candidatures pour la prochaine promotion sont ouvertes."
+    }
+  },
+  "programsPage": {
+    "hero": {
+      "eyebrow": "Programmes",
+      "title": "Trouvez le chemin de votre don",
+      "subtitle": "Du choriste débutant au chef de louange chevronné — une porte vous attend."
+    },
+    "filters": {
+      "all": "Tous",
+      "choristers": "Jeunes choristes",
+      "worship": "Conduite de louange",
+      "instruments": "Instruments"
+    },
+    "card": {
+      "audience": "Public",
+      "duration": "Durée",
+      "format": "Format",
+      "prerequisites": "Prérequis"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": {
+        "q1": "Quel âge minimum pour postuler ?",
+        "a1": "Notre programme le plus jeune accueille les élèves dès 8 ans.",
+        "q2": "Faut-il une expérience musicale ?",
+        "a2": "Pas pour la plupart des programmes — nous partons des fondamentaux.",
+        "q3": "En présentiel ou en ligne ?",
+        "a3": "Principalement à Accra ; certains modules sont hybrides.",
+        "q4": "Y a-t-il des frais ?",
+        "a4": "Les frais varient ; des bourses limitées existent."
+      }
+    }
+  },
+  "events": {
+    "hero": {
+      "eyebrow": "Ateliers & Événements",
+      "title": "Venez adorer avec nous",
+      "subtitle": "Formations, masterclasses et rassemblements de louange."
+    },
+    "card": {
+      "date": "Date",
+      "time": "Heure",
+      "venue": "Lieu",
+      "capacity": "Capacité",
+      "fee": "Frais",
+      "free": "Gratuit"
+    },
+    "past": {
+      "title": "Événements passés",
+      "subtitle": "Un regard en arrière."
+    },
+    "requestCta": {
+      "title": "Un atelier dans votre église ou école ?",
+      "body": "Nous nous déplaçons. Nous arrivons prêts. Nous laissons votre équipe plus forte.",
+      "cta": "Demander un atelier"
+    },
+    "empty": "Aucun événement à venir pour le moment."
+  },
+  "apply": {
+    "hero": {
+      "eyebrow": "Postuler",
+      "title": "Postulez pour rejoindre la Chorale",
+      "subtitle": "C'est une candidature — pas une inscription. Notre équipe étudiera votre dossier."
+    },
+    "steps": {
+      "personal": "Informations",
+      "interest": "Programme",
+      "consent": "Consentement"
+    },
+    "fields": {
+      "fullName": "Nom complet",
+      "age": "Âge",
+      "phone": "Numéro de téléphone",
+      "email": "E-mail",
+      "passportPhoto": "URL de la photo d'identité",
+      "interestLevel": "Niveau",
+      "preferredProgram": "Programme souhaité",
+      "experience": "Parlez-nous de votre expérience musicale",
+      "guardianConsent": "Je confirme le consentement parental (requis si moins de 18 ans).",
+      "notes": "Autre chose à nous dire ?"
+    },
+    "levels": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "review": {
+      "title": "Vérifiez votre candidature",
+      "subtitle": "Un dernier coup d'œil avant l'envoi."
+    },
+    "submit": "Envoyer la candidature",
+    "submitting": "Envoi…",
+    "success": {
+      "title": "Candidature reçue",
+      "body": "Merci. Notre équipe vous contactera bientôt.",
+      "cta": "Retour à l'accueil"
+    },
+    "errors": {
+      "submit": "Impossible d'envoyer la candidature. Veuillez réessayer."
+    }
+  },
+  "gallery": {
+    "hero": {
+      "eyebrow": "Galerie",
+      "title": "La louange en mouvement",
+      "subtitle": "Répétitions, performances, installations — capturées."
+    },
+    "filters": {
+      "all": "Tout",
+      "programs": "Programmes & Répétitions",
+      "equipment": "Installations",
+      "events": "Événements & Louange"
+    },
+    "videos": {
+      "title": "Sur la chaîne",
+      "subtitle": "En direct et en coulisses."
+    },
+    "loadMore": "Charger plus",
+    "empty": "Aucune photo dans cette catégorie."
+  },
+  "equipmentPage": {
+    "hero": {
+      "eyebrow": "Services d'équipement",
+      "title": "Nous équipons les églises",
+      "subtitle": "De l'installation audio à la formation — nous bâtissons le son qui sert votre sanctuaire."
+    },
+    "services": {
+      "title": "Ce que nous faisons",
+      "install": {
+        "title": "Installation",
+        "body": "Enceintes, retours, mixeurs, micros — bien faits du premier coup."
+      },
+      "config": {
+        "title": "Configuration",
+        "body": "Acoustique, routage des signaux, scène claire."
+      },
+      "training": {
+        "title": "Formation",
+        "body": "Nous formons votre équipe technique."
+      },
+      "support": {
+        "title": "Support",
+        "body": "Nous restons présents après l'installation."
+      }
+    },
+    "types": {
+      "title": "Équipements pris en charge",
+      "piano": "Piano acoustique",
+      "organ": "Orgue",
+      "keyboards": "Claviers & Synthés",
+      "sound": "Sonorisation"
+    },
+    "cases": {
+      "title": "Installations récentes",
+      "subtitle": "Quelques églises servies."
+    },
+    "cta": {
+      "title": "Prêt à améliorer votre son ?",
+      "body": "Parlez-nous de votre espace — nous concevrons l'installation."
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Parlons",
+      "subtitle": "Questions, prières, invitations — nous écoutons."
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "fullName": "Nom complet",
+      "email": "E-mail",
+      "phone": "Téléphone (facultatif)",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer",
+      "sending": "Envoi…",
+      "success": "Message envoyé. Nous répondrons bientôt.",
+      "error": "Impossible d'envoyer. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Nous joindre",
+      "addressLabel": "Adresse",
+      "emailLabel": "E-mail",
+      "phoneLabel": "Téléphone"
+    },
+    "applyBox": {
+      "title": "Envie de nous rejoindre ?",
+      "body": "Soumettez une candidature officielle ici.",
+      "cta": "Postuler"
+    }
+  },
+  "howToApply": {
+    "hero": {
+      "eyebrow": "Comment postuler",
+      "title": "Votre parcours, étape par étape",
+      "subtitle": "Un chemin clair de l'intérêt à l'acceptation."
+    },
+    "steps": {
+      "title": "Le processus",
+      "s1Title": "Soumettez votre candidature",
+      "s1Body": "Remplissez le formulaire — environ cinq minutes.",
+      "s2Title": "Examen initial",
+      "s2Body": "Notre équipe lit chaque candidature.",
+      "s3Title": "Audition ou entretien",
+      "s3Body": "Les présélectionnés passent une courte audition.",
+      "s4Title": "Bienvenue dans la chorale",
+      "s4Body": "Les acceptés reçoivent un pack d'accueil."
+    },
+    "eligibility": {
+      "title": "Éligibilité",
+      "items": {
+        "i1": "Ouvert dès 8 ans selon le programme.",
+        "i2": "Aucune formation musicale formelle requise pour la plupart des parcours.",
+        "i3": "Consentement parental requis si moins de 18 ans.",
+        "i4": "Un cœur pour la louange et la volonté d'apprendre — indispensables."
+      }
+    },
+    "faq": {
+      "title": "Réponses rapides",
+      "items": {
+        "q1": "Combien de temps dure l'examen ?",
+        "a1": "Généralement deux à trois semaines.",
+        "q2": "Puis-je repostuler si je ne suis pas accepté ?",
+        "a2": "Oui — nous encourageons une nouvelle candidature.",
+        "q3": "Y a-t-il des bourses ?",
+        "a3": "Des bourses limitées existent selon le besoin."
+      }
+    },
+    "cta": "Commencer ma candidature"
+  },
+  "donate": {
+    "hero": {
+      "eyebrow": "Soutien",
+      "title": "Semez dans le son",
+      "subtitle": "Votre don forme, équipe et envoie."
+    },
+    "impact": {
+      "title": "Où va votre don",
+      "body": "Chaque cedi est consacré à la formation, à l'équipement et à l'évangélisation."
+    },
+    "tiers": {
+      "title": "Choisissez votre don",
+      "chorister": {
+        "title": "Parrainer un choriste",
+        "amount": 250,
+        "body": "Couvrez la formation d'un jeune choriste pour une saison."
+      },
+      "church": {
+        "title": "Équiper une église",
+        "amount": 1500,
+        "body": "Contribuez à l'audio d'une église dans le besoin."
+      },
+      "general": {
+        "title": "Soutien général",
+        "amount": 100,
+        "body": "Renforcez l'œuvre là où c'est le plus nécessaire."
+      }
+    },
+    "form": {
+      "amount": "Montant (GHS)",
+      "customAmount": "Ou entrez un montant personnalisé",
+      "donorName": "Votre nom (facultatif)",
+      "email": "E-mail (facultatif)",
+      "phone": "Téléphone (facultatif)",
+      "message": "Laissez un mot (facultatif)",
+      "submit": "Donner",
+      "submitting": "Préparation du paiement…",
+      "soon": "L'intégration Paystack arrive prochainement.",
+      "success": "Merci pour votre générosité.",
+      "error": "Impossible de traiter le don. Veuillez réessayer."
+    }
+  },
+  "stats": {
+    "years": 7,
+    "choristers": 240,
+    "churches": 35
+  },
+  "testimonials": [
+    {
+      "quote": "Adullam Cave m'a appris à adorer, pas seulement à chanter.",
+      "name": "Akosua M.",
+      "role": "Choriste, promotion 2023"
+    },
+    {
+      "quote": "Leur équipe a installé notre audio et formé nos techniciens. Cela nous sert toujours.",
+      "name": "Pasteur Daniel O.",
+      "role": "Pasteur principal, Accra"
+    },
+    {
+      "quote": "L'atelier le plus riche spirituellement que notre équipe ait connu.",
+      "name": "Priscilla A.",
+      "role": "Directrice de louange"
+    }
+  ]
 }

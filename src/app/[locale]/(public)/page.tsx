@@ -1,40 +1,52 @@
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { HeroSection } from '@/components/sections/HeroSection';
+import { MissionStrip } from '@/components/sections/MissionStrip';
+import { AboutPreview } from '@/components/sections/AboutPreview';
+import { ProgramsPreview } from '@/components/sections/ProgramsPreview';
+import { UpcomingEvents } from '@/components/sections/UpcomingEvents';
+import { GalleryPreview } from '@/components/sections/GalleryPreview';
+import { EquipmentPreview } from '@/components/sections/EquipmentPreview';
+import { DonationCTA } from '@/components/sections/DonationCTA';
+import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { BlogPreview } from '@/components/sections/BlogPreview';
+import { ContactStrip } from '@/components/sections/ContactStrip';
+import {
+  placeholderEvents,
+  placeholderGallery,
+  placeholderBlog,
+} from '@/lib/constants/placeholders';
+import { siteConfig } from '@/config/site';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('home.hero');
+  return {
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: t('subheadline'),
+    openGraph: {
+      title: siteConfig.name,
+      description: t('subheadline'),
+      type: 'website',
+      url: siteConfig.url,
+      siteName: siteConfig.name,
+    },
+  };
+}
 
 export default function HomePage() {
-  const t = useTranslations();
-
   return (
-    <section className="relative isolate overflow-hidden">
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-dark opacity-[0.04] dark:opacity-100"
-      />
-      <div className="container flex min-h-[calc(100svh-5rem)] flex-col items-center justify-center py-24 text-center">
-        <Badge variant="gold" className="mb-6 px-4 py-1.5 text-xs uppercase tracking-[0.2em]">
-          Accra, Ghana
-        </Badge>
-        <h1 className="font-serif text-balance text-5xl font-bold tracking-tight md:text-7xl">
-          <span className="text-gradient-brand">{t('site.name')}</span>
-        </h1>
-        <p className="mt-4 font-serif text-lg italic text-gold-600 md:text-2xl">
-          {t('site.tagline')}
-        </p>
-        <p className="mt-6 max-w-xl text-balance text-sm leading-relaxed text-muted-foreground md:text-base">
-          Training young choristers, worship singers, and instrumentalists — and equipping churches
-          and institutions across Ghana through workshops and equipment installation.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg" className="bg-gold hover:bg-gold-700 text-white shadow-glow-gold/50">
-            <Link href="/apply">{t('cta.applyNow')}</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link href="/about">{t('cta.learnMore')}</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
+    <>
+      <HeroSection />
+      <MissionStrip />
+      <AboutPreview />
+      <ProgramsPreview />
+      <UpcomingEvents events={placeholderEvents} />
+      <GalleryPreview items={placeholderGallery} />
+      <EquipmentPreview />
+      <DonationCTA />
+      <TestimonialsSection />
+      <BlogPreview posts={placeholderBlog} />
+      <ContactStrip />
+    </>
   );
 }

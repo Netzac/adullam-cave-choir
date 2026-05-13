@@ -8,19 +8,28 @@
     "about": "About",
     "programs": "Programs",
     "workshops": "Workshops",
+    "events": "Events",
     "gallery": "Gallery",
     "equipment": "Equipment",
     "contact": "Contact",
+    "donate": "Donate",
+    "howToApply": "How to Apply",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
   "cta": {
-    "applyNow": "Apply Now",
+    "applyNow": "Apply to Join",
     "learnMore": "Learn More",
+    "watchStory": "Watch Our Story",
     "getInTouch": "Get in Touch",
     "bookWorkshop": "Book a Workshop",
     "viewAll": "View All",
-    "watchVideo": "Watch Video"
+    "watchVideo": "Watch Video",
+    "donate": "Support the Vision",
+    "requestWorkshop": "Request a Workshop",
+    "requestService": "Request Equipment Service",
+    "applyProgram": "Apply for this Program",
+    "applyWorkshop": "Apply for Workshop"
   },
   "common": {
     "loading": "Loading…",
@@ -34,12 +43,17 @@
     "save": "Save",
     "next": "Next",
     "previous": "Previous",
+    "back": "Back",
+    "continue": "Continue",
     "readMore": "Read more",
     "language": "Language",
     "theme": "Theme",
     "themeLight": "Light",
     "themeDark": "Dark",
-    "themeSystem": "System"
+    "themeSystem": "System",
+    "step": "Step",
+    "of": "of",
+    "optional": "Optional"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -62,5 +76,395 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "followUs": "Follow us"
-  }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Accra, Ghana",
+      "headline": "from the Cave to the Stage",
+      "subheadline": "We train the next generation of choristers, worship leaders, and instrumentalists — and equip churches across Ghana with the sound of heaven.",
+      "scrollHint": "Scroll to explore"
+    },
+    "mission": {
+      "title": "A movement of worship",
+      "yearsLabel": "Years of excellence",
+      "choristersLabel": "Choristers trained",
+      "churchesLabel": "Churches served"
+    },
+    "about": {
+      "eyebrow": "Who We Are",
+      "title": "A school of sound, a sanctuary of song",
+      "p1": "Adullam Cave Choir was forged in seasons of quiet preparation — in the cave before the stage. We are a Ghana-rooted ministry training young voices, gifted instrumentalists, and worship leaders for excellence and reverence.",
+      "p2": "From hands-on rehearsals to nationwide equipment installations, every note we shape and every speaker we hang is in service of authentic worship."
+    },
+    "programs": {
+      "eyebrow": "What We Do",
+      "title": "Pathways for every calling",
+      "subtitle": "Choose the journey that fits your gift — voice, leadership, or instrument."
+    },
+    "events": {
+      "eyebrow": "What's Next",
+      "title": "Upcoming workshops & events",
+      "subtitle": "Join us in person, online, or invite us to your church.",
+      "empty": "No upcoming events right now — check back soon."
+    },
+    "gallery": {
+      "eyebrow": "Moments",
+      "title": "Caught in worship",
+      "subtitle": "Glimpses of rehearsals, performances, and installations."
+    },
+    "equipment": {
+      "eyebrow": "We Equip Churches",
+      "title": "Sound that serves worship",
+      "subtitle": "From sanctuary speakers to keyboard rigs — we install, configure, and train your team."
+    },
+    "donate": {
+      "eyebrow": "Sow Into the Sound",
+      "title": "Support the Vision",
+      "subtitle": "Every gift trains a chorister, equips a church, and sends worship further."
+    },
+    "testimonials": {
+      "eyebrow": "Stories",
+      "title": "What people are saying"
+    },
+    "blog": {
+      "eyebrow": "Latest",
+      "title": "From the blog",
+      "subtitle": "Reflections, lessons, and news from the choir."
+    },
+    "contact": {
+      "title": "Let's talk",
+      "subtitle": "Have a question, prayer request, or workshop invitation? We're listening."
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About",
+      "title": "Born in the cave. Built for the stage.",
+      "subtitle": "Our story is one of quiet preparation, raw devotion, and a calling that wouldn't let us go."
+    },
+    "story": {
+      "title": "Our story",
+      "p1": "Long before the lights and the live streams, there was a cave — a place of consecration where voices were forged, calluses formed, and a sound was born.",
+      "p2": "What began as a handful of young singers in Accra has grown into a movement training choristers and equipping churches across Ghana and beyond."
+    },
+    "vmv": {
+      "title": "Vision, Mission & Values",
+      "visionTitle": "Vision",
+      "visionBody": "To raise a generation of worshippers whose lives and sound point to the King.",
+      "missionTitle": "Mission",
+      "missionBody": "We train, mentor, and equip choristers, worship leaders, and churches with excellence and integrity.",
+      "valuesTitle": "Values",
+      "valuesBody": "Reverence. Discipline. Excellence. Servanthood. Mentorship."
+    },
+    "philosophy": {
+      "title": "Our training philosophy",
+      "p1": "We believe great worship is the overflow of hidden devotion. So we teach craft and character together — vocal technique alongside heart posture, musicianship alongside ministry.",
+      "p2": "Every program runs on three rails: foundational skill, intentional mentorship, and serving the local church."
+    },
+    "equipment": {
+      "title": "We also equip churches",
+      "body": "Beyond training, we install audio systems, configure stage rigs, and train worship teams to use them — because the right sound serves the right Spirit."
+    },
+    "leadership": {
+      "title": "Leadership",
+      "subtitle": "The shepherds behind the sound."
+    },
+    "cta": {
+      "title": "Ready to step into your sound?",
+      "body": "Applications are open for our next intake."
+    }
+  },
+  "programsPage": {
+    "hero": {
+      "eyebrow": "Programs",
+      "title": "Find the path for your gift",
+      "subtitle": "From first-time choristers to seasoned worship leaders — there's a doorway for you."
+    },
+    "filters": {
+      "all": "All Programs",
+      "choristers": "Young Choristers",
+      "worship": "Worship Leadership",
+      "instruments": "Instrument Training"
+    },
+    "card": {
+      "audience": "Audience",
+      "duration": "Duration",
+      "format": "Format",
+      "prerequisites": "Prerequisites"
+    },
+    "faq": {
+      "title": "Frequently asked",
+      "items": {
+        "q1": "How old do I need to be to apply?",
+        "a1": "Our youngest program accepts students from age 8. Adults are welcome in our worship and instrument tracks.",
+        "q2": "Do I need prior musical experience?",
+        "a2": "For most programs, no. We start from the fundamentals. Some advanced tracks have prerequisites — listed on each card.",
+        "q3": "Are programs in-person, online, or both?",
+        "a3": "Most run in person in Accra. Selected modules are offered hybrid or online — see each program's format badge.",
+        "q4": "Is there a fee?",
+        "a4": "Fees vary by program. We work hard to keep them accessible and offer scholarships in select cases."
+      }
+    }
+  },
+  "events": {
+    "hero": {
+      "eyebrow": "Workshops & Events",
+      "title": "Come and worship with us",
+      "subtitle": "Live trainings, masterclasses, and worship gatherings — open to choristers and churches alike."
+    },
+    "card": {
+      "date": "Date",
+      "time": "Time",
+      "venue": "Venue",
+      "capacity": "Capacity",
+      "fee": "Fee",
+      "free": "Free"
+    },
+    "past": {
+      "title": "Past events",
+      "subtitle": "A look back at where we've been."
+    },
+    "requestCta": {
+      "title": "Need a workshop at your church or school?",
+      "body": "We travel. We come prepared. We leave your team stronger.",
+      "cta": "Request a Workshop"
+    },
+    "empty": "No upcoming events right now — check back soon."
+  },
+  "apply": {
+    "hero": {
+      "eyebrow": "Apply",
+      "title": "Apply to Join Adullam Cave Choir",
+      "subtitle": "This is an application — not a registration. Tell us about you, and our team will review and reach out."
+    },
+    "steps": {
+      "personal": "Personal Info",
+      "interest": "Program Interest",
+      "consent": "Consent & Submit"
+    },
+    "fields": {
+      "fullName": "Full name",
+      "age": "Age",
+      "phone": "Phone number",
+      "email": "Email",
+      "passportPhoto": "Passport photo URL",
+      "interestLevel": "Interest level",
+      "preferredProgram": "Preferred program",
+      "experience": "Tell us about your musical experience",
+      "guardianConsent": "I confirm that a parent or guardian consents to this application (required if under 18).",
+      "notes": "Anything else we should know?"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "review": {
+      "title": "Review your application",
+      "subtitle": "Take one last look before submitting."
+    },
+    "submit": "Submit application",
+    "submitting": "Submitting…",
+    "success": {
+      "title": "Application received",
+      "body": "Thank you. Our team will review your application and reach out to you soon. May the Lord bless your preparation.",
+      "cta": "Back to home"
+    },
+    "errors": {
+      "submit": "We couldn't submit your application. Please try again."
+    }
+  },
+  "gallery": {
+    "hero": {
+      "eyebrow": "Gallery",
+      "title": "Worship in motion",
+      "subtitle": "Rehearsals, performances, installations — captured."
+    },
+    "filters": {
+      "all": "All",
+      "programs": "Programs & Rehearsals",
+      "equipment": "Equipment Installations",
+      "events": "Events & Worship"
+    },
+    "videos": {
+      "title": "From the channel",
+      "subtitle": "Watch us live and behind the scenes."
+    },
+    "loadMore": "Load more",
+    "empty": "No photos in this category yet."
+  },
+  "equipmentPage": {
+    "hero": {
+      "eyebrow": "Equipment Services",
+      "title": "We Equip Churches for Worship",
+      "subtitle": "From audio installs to keyboard rigs and team training — we build the sound that serves your sanctuary."
+    },
+    "services": {
+      "title": "What we do",
+      "install": {
+        "title": "Installation",
+        "body": "Speakers, monitors, mixers, mics — done right the first time."
+      },
+      "config": {
+        "title": "Configuration",
+        "body": "Acoustic tuning, signal routing, and clean stage layouts."
+      },
+      "training": {
+        "title": "Training",
+        "body": "We train your tech team to run and maintain it confidently."
+      },
+      "support": {
+        "title": "Support",
+        "body": "We don't disappear after install — we keep showing up."
+      }
+    },
+    "types": {
+      "title": "Equipment we work with",
+      "piano": "Acoustic Piano",
+      "organ": "Organ",
+      "keyboards": "Keyboards & Synths",
+      "sound": "Sound Systems"
+    },
+    "cases": {
+      "title": "Recent installations",
+      "subtitle": "A few of the churches we've served."
+    },
+    "cta": {
+      "title": "Ready to upgrade your sound?",
+      "body": "Tell us about your space — we'll design the right setup."
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk",
+      "subtitle": "Questions, prayer requests, workshop invitations — we're listening."
+    },
+    "form": {
+      "title": "Send us a message",
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent. We'll be in touch soon.",
+      "error": "Couldn't send your message. Please try again."
+    },
+    "info": {
+      "title": "Reach us",
+      "addressLabel": "Address",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone"
+    },
+    "applyBox": {
+      "title": "Looking to join?",
+      "body": "Submit a formal application here.",
+      "cta": "Apply now"
+    }
+  },
+  "howToApply": {
+    "hero": {
+      "eyebrow": "How to Apply",
+      "title": "Your journey, step by step",
+      "subtitle": "A clear path from interest to acceptance."
+    },
+    "steps": {
+      "title": "The application process",
+      "s1Title": "Submit your application",
+      "s1Body": "Complete the online form. It takes about five minutes.",
+      "s2Title": "Initial review",
+      "s2Body": "Our team reviews every application personally.",
+      "s3Title": "Audition or interview",
+      "s3Body": "Shortlisted applicants are invited for a short audition or interview.",
+      "s4Title": "Welcome to the choir",
+      "s4Body": "Accepted choristers receive a welcome pack and orientation date."
+    },
+    "eligibility": {
+      "title": "Eligibility",
+      "items": {
+        "i1": "Open to applicants from age 8 upward (program-dependent).",
+        "i2": "No formal music education required for most tracks.",
+        "i3": "Applicants under 18 must have parental or guardian consent.",
+        "i4": "A heart for worship and willingness to learn — non-negotiable."
+      }
+    },
+    "faq": {
+      "title": "Quick answers",
+      "items": {
+        "q1": "How long does review take?",
+        "a1": "Usually two to three weeks from submission.",
+        "q2": "Can I apply again if I'm not accepted?",
+        "a2": "Yes — we encourage reapplication after a season of preparation.",
+        "q3": "Do you offer scholarships?",
+        "a3": "Limited scholarships are available based on need and gifting."
+      }
+    },
+    "cta": "Begin your application"
+  },
+  "donate": {
+    "hero": {
+      "eyebrow": "Support",
+      "title": "Sow Into the Sound",
+      "subtitle": "Your gift trains choristers, equips churches, and sends worship farther."
+    },
+    "impact": {
+      "title": "Where your gift goes",
+      "body": "Every cedi is stewarded toward training, equipment, scholarships, and outreach — never overhead waste."
+    },
+    "tiers": {
+      "title": "Choose how to give",
+      "chorister": {
+        "title": "Sponsor a Chorister",
+        "amount": 250,
+        "body": "Cover training, materials, and care for one young chorister for a season."
+      },
+      "church": {
+        "title": "Equip a Church",
+        "amount": 1500,
+        "body": "Contribute toward audio gear and installation for a church in need."
+      },
+      "general": {
+        "title": "General Support",
+        "amount": 100,
+        "body": "Strengthen the work wherever it's most needed."
+      }
+    },
+    "form": {
+      "amount": "Amount (GHS)",
+      "customAmount": "Or enter a custom amount",
+      "donorName": "Your name (optional)",
+      "email": "Email (optional)",
+      "phone": "Phone (optional)",
+      "message": "Leave a note (optional)",
+      "submit": "Give now",
+      "submitting": "Preparing payment…",
+      "soon": "Paystack integration arrives in the next release.",
+      "success": "Thank you for your generosity.",
+      "error": "We couldn't process your gift. Please try again."
+    }
+  },
+  "stats": {
+    "years": 7,
+    "choristers": 240,
+    "churches": 35
+  },
+  "testimonials": [
+    {
+      "quote": "Adullam Cave didn't just teach me to sing — they shaped how I worship.",
+      "name": "Akosua M.",
+      "role": "Chorister, Class of 2023"
+    },
+    {
+      "quote": "Their team installed our church audio and trained our techs. Years later, it still serves us beautifully.",
+      "name": "Pastor Daniel O.",
+      "role": "Lead Pastor, Accra"
+    },
+    {
+      "quote": "The workshop was the most spiritually rich training our worship team has ever had.",
+      "name": "Priscilla A.",
+      "role": "Worship Director"
+    }
+  ]
 }
