@@ -1,10 +1,11 @@
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import type { Database } from '@/types/database';
 
 export function createClient() {
   const cookieStore = cookies();
 
-  return createServerClient(
+  return createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
@@ -18,10 +19,22 @@ export function createClient() {
               cookieStore.set(name, value, options)
             );
           } catch {
-            // Server Component contexts cannot set cookies.
+            // Called from a Server Component; safe to ignore as middleware
+            // refreshes the session on each request.
           }
         },
       },
     }
   );
+}
+
+export function createAdminClient() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceKey) {
+    throw new Error('Supabase admin client requires SUPABASE_SERVICE_ROLE_KEY');
+  }
+  return createServerClient<Database>(url, serviceKey, {
+    cookies: { getAll: () => [], setAll: () => {} },
+  });
 }
