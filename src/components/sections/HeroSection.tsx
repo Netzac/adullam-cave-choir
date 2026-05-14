@@ -8,7 +8,7 @@ import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-const PARTICLE_COUNT = 14;
+const PARTICLE_COUNT = 30;
 
 function useParticles() {
   return React.useMemo(
@@ -16,10 +16,10 @@ function useParticles() {
       Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
-        delay: Math.random() * 6,
+        delay: Math.random() * 3,
         duration: 10 + Math.random() * 8,
-        size: 14 + Math.random() * 20,
-        opacity: 0.08 + Math.random() * 0.18,
+        size: 30 + Math.random() * 20,
+        opacity: 0.45 + Math.random() * 0.18,
       })),
     []
   );

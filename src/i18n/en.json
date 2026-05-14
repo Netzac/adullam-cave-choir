@@ -466,5 +466,21 @@
       "name": "Priscilla A.",
       "role": "Worship Director"
     }
-  ]
+  ],
+  "adminAuth": {
+    "login": {
+      "eyebrow": "Admin Portal",
+      "title": "Welcome back",
+      "subtitle": "Sign in to manage applications, events, and content.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@adullamcave.org",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "invalid": "Invalid email or password.",
+      "unexpected": "Something went wrong. Please try again.",
+      "footnote": "Access is restricted to authorized administrators."
+    }
+  }
 }

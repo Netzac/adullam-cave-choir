@@ -466,5 +466,21 @@
       "name": "Priscilla A.",
       "role": "Directrice de louange"
     }
-  ]
+  ],
+  "adminAuth": {
+    "login": {
+      "eyebrow": "Portail administrateur",
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous pour gérer les candidatures, les événements et le contenu.",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "vous@adullamcave.org",
+      "passwordLabel": "Mot de passe",
+      "passwordPlaceholder": "Entrez votre mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion…",
+      "invalid": "E-mail ou mot de passe invalide.",
+      "unexpected": "Une erreur est survenue. Veuillez réessayer.",
+      "footnote": "L'accès est réservé aux administrateurs autorisés."
+    }
+  }
 }
