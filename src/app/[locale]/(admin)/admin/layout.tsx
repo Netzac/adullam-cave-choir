@@ -33,12 +33,19 @@ export default async function AdminGroupLayout({
     user.email?.split('@')[0] ||
     'Admin';
 
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .single();
+
   return (
     <AdminLayout
       user={{
         name: displayName,
         email: user.email ?? '',
         avatarUrl: metadata.avatar_url ?? null,
+        role: profile?.role ?? 'admin',
       }}
     >
       {children}

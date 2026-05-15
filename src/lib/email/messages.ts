@@ -42,6 +42,30 @@ export function getApplicationReceivedEmail(
   };
 }
 
+export function getPaymentConfirmationEmail(
+  locale: string | null | undefined,
+  data: { name: string; amount: string; currency: string; reference: string },
+) {
+  const loc = resolveLocale(locale);
+  const copy = bundles[loc].paymentConfirmation;
+  const vars = {
+    name: data.name,
+    amount: data.amount,
+    currency: data.currency,
+    reference: data.reference,
+    siteName: siteConfig.name,
+  };
+
+  return {
+    subject: copy.subject,
+    html: `
+      <p>${interpolate(copy.greeting, vars)}</p>
+      <p>${interpolate(copy.body, vars)}</p>
+      <p>${interpolate(copy.signoff, vars)}</p>
+    `,
+  };
+}
+
 export function getContactAdminEmail(data: {
   full_name: string;
   email: string;

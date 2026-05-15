@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -20,6 +20,7 @@ import {
 import type { BlogPost } from '@/types/database';
 import { cn } from '@/lib/utils/cn';
 import { slugify } from '@/lib/utils/slugify';
+import { RichTextEditor } from '@/components/admin/RichTextEditor';
 
 type BlogFormInput = z.input<typeof blogPostSchema>;
 
@@ -257,11 +258,16 @@ export function BlogPostForm({ mode, post }: BlogPostFormProps) {
 
         <FieldGroup className="sm:col-span-2" error={errors.content?.message}>
           <Label htmlFor="blog-content">{fieldsT('content')}</Label>
-          <Textarea
-            id="blog-content"
-            rows={12}
-            placeholder={placeholdersT('content')}
-            {...form.register('content')}
+          <Controller
+            control={form.control}
+            name="content"
+            render={({ field }) => (
+              <RichTextEditor
+                value={field.value ?? ''}
+                onChange={field.onChange}
+                placeholder={placeholdersT('content')}
+              />
+            )}
           />
         </FieldGroup>
 

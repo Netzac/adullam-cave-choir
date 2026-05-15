@@ -1,4 +1,9 @@
-export type UserRole = 'super_admin' | 'admin' | 'editor';
+export type UserRole =
+  | 'super_admin'
+  | 'admin'
+  | 'editor'
+  | 'content_manager'
+  | 'workshop_coordinator';
 
 export type ApplicationStatus =
   | 'pending'
@@ -72,6 +77,7 @@ export type Application = {
   passport_photo_url: string | null;
   status: ApplicationStatus;
   internal_notes: string | null;
+  portal_enabled: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -113,6 +119,8 @@ export type EventApplication = {
   phone: string;
   message: string | null;
   status: EventApplicationStatus;
+  payment_reference: string | null;
+  payment_status: DonationStatus;
   created_at: string;
 }
 
@@ -210,7 +218,7 @@ export type Database = {
       };
       applications: {
         Row: Application;
-        Insert: Insert<Application, 'status' | 'internal_notes'>;
+        Insert: Insert<Application, 'status' | 'internal_notes' | 'portal_enabled'>;
         Update: Update<Application>;
         Relationships: [];
       };
@@ -228,7 +236,7 @@ export type Database = {
       };
       event_applications: {
         Row: EventApplication;
-        Insert: Insert<EventApplication, 'status'>;
+        Insert: Insert<EventApplication, never>;
         Update: Update<EventApplication>;
         Relationships: [];
       };
@@ -252,7 +260,7 @@ export type Database = {
       };
       donations: {
         Row: Donation;
-        Insert: Insert<Donation, 'status'>;
+        Insert: Insert<Donation, never>;
         Update: Update<Donation>;
         Relationships: [];
       };

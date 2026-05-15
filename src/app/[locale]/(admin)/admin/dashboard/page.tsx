@@ -50,6 +50,7 @@ import type {
   Database,
   NotificationType,
 } from '@/types/database';
+import { DashboardAnalytics } from '@/components/admin/DashboardAnalytics';
 
 export const dynamic = 'force-dynamic';
 
@@ -81,6 +82,10 @@ export default async function AdminDashboardPage() {
           <StatsRow />
         </React.Suspense>
       </section>
+
+      <React.Suspense fallback={<StatsSkeleton />}>
+        <DashboardAnalytics />
+      </React.Suspense>
 
       <section className="grid gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">

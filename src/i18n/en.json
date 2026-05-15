@@ -438,9 +438,13 @@
       "email": "Email (optional)",
       "phone": "Phone (optional)",
       "message": "Leave a note (optional)",
-      "submit": "Give now",
+      "submit": "Continue to payment",
       "submitting": "Preparing payment…",
-      "soon": "Paystack integration arrives in the next release.",
+      "payNow": "Pay with Paystack",
+      "payPrompt": "Complete your gift securely with Paystack (card or mobile money).",
+      "editDetails": "Edit details",
+      "emailRequired": "Email is required to process payment.",
+      "thankYou": "Thank you — your gift helps train choristers and equip churches.",
       "success": "Thank you for your generosity.",
       "error": "We couldn't process your gift. Please try again."
     }
@@ -500,7 +504,40 @@
       "equipment": "Equipment",
       "donations": "Donations",
       "notifications": "Notifications",
-      "settings": "Settings"
+      "settings": "Settings",
+      "team": "Team"
+    }
+  },
+  "adminAnalytics": {
+    "title": "Analytics",
+    "exportCsv": "Export CSV",
+    "applicationsChart": "Applications per month",
+    "donationsChart": "Donations over time (GHS)",
+    "programsChart": "Most popular programs",
+    "attendanceChart": "Event registrations"
+  },
+  "adminTeam": {
+    "title": "Team & roles",
+    "subtitle": "Assign roles to control what each admin can access.",
+    "tableTitle": "Admin users",
+    "loading": "Loading team…",
+    "saved": "Role updated",
+    "forbidden": "Only super admins can manage team roles.",
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role"
+    },
+    "roles": {
+      "super_admin": "Super admin",
+      "admin": "Admin",
+      "editor": "Editor",
+      "content_manager": "Content manager",
+      "workshop_coordinator": "Workshop coordinator"
+    },
+    "errors": {
+      "load": "Could not load team members.",
+      "save": "Could not update role."
     }
   },
   "adminDashboard": {
@@ -1238,6 +1275,22 @@
       "save": "Couldn't save {tab} settings. Please try again."
     }
   },
+  "memberPortal": {
+    "loading": "Loading your portal…",
+    "loginTitle": "Member portal",
+    "loginHint": "Sign in with the credentials provided when your application was accepted.",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "signOut": "Sign out",
+    "dashboardTitle": "Your membership",
+    "applicationStatus": "Application status",
+    "program": "Program",
+    "status": "Status",
+    "upcomingEvents": "Your event registrations",
+    "noApplication": "No portal-enabled application was found for this account."
+  },
   "errorPages": {
     "notFound": {
       "title": "This page isn't in our set list",
@@ -1263,6 +1316,16 @@
       "from": "From",
       "phone": "Phone",
       "subjectLabel": "Subject"
+    },
+    "paymentConfirmation": {
+      "subject": "Payment received — thank you",
+      "greeting": "Hi {name},",
+      "body": "We received your payment of {currency} {amount}. Reference: {reference}.",
+      "signoff": "— {siteName}"
+    },
+    "pendingApplicationsReminder": {
+      "subject": "Applications awaiting review",
+      "body": "You have {count} application(s) pending for more than 7 days."
     }
   }
 }

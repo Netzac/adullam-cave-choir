@@ -4,7 +4,8 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { PaystackButton } from '@/components/payments/PaystackButton';
 import { useSearchParams } from 'next/navigation';
 import { toast } from 'sonner';
 import { Heart, Sparkles, Church, HeartHandshake, CheckCircle2 } from 'lucide-react';
@@ -20,6 +21,7 @@ const tierKeys = ['chorister', 'church', 'general'] as const;
 const tierIcons = { chorister: HeartHandshake, church: Church, general: Sparkles } as const;
 
 export function DonateView() {
+  const locale = useLocale();
   const hero = useTranslations('donate.hero');
   const nav = useTranslations('nav');
   const impact = useTranslations('donate.impact');
@@ -31,6 +33,8 @@ export function DonateView() {
 
   const [submitting, setSubmitting] = React.useState(false);
   const [done, setDone] = React.useState(false);
+  const [paymentRef, setPaymentRef] = React.useState<string | null>(null);
+  const [authUrl, setAuthUrl] = React.useState<string | null>(null);
 
   const rhf = useForm<DonationInput>({
     resolver: zodResolver(donationSchema) as any,
@@ -53,16 +57,30 @@ export function DonateView() {
   };
 
   const onSubmit = async (data: DonationInput) => {
+    if (!data.email) {
+      rhf.setError('email', { message: f('emailRequired') });
+      return;
+    }
     setSubmitting(true);
     try {
       const res = await fetch('/api/donations', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, locale }),
       });
-      if (!res.ok) throw new Error('Failed');
-      setDone(true);
-      toast.success(f('success'));
+      const json = (await res.json()) as {
+        ok?: boolean;
+        reference?: string;
+        authorizationUrl?: string;
+        configured?: boolean;
+      };
+      if (!res.ok || !json.ok || !json.reference) throw new Error('Failed');
+      setPaymentRef(json.reference);
+      setAuthUrl(json.authorizationUrl ?? null);
+      if (!json.configured) {
+        setDone(true);
+        toast.success(f('success'));
+      }
     } catch {
       toast.error(f('error'));
     } finally {
@@ -146,7 +164,27 @@ export function DonateView() {
                 <CheckCircle2 className="h-7 w-7" />
               </div>
               <h3 className="mt-5 font-serif text-2xl font-bold">{f('success')}</h3>
-              <p className="mt-2 text-muted-foreground">{f('soon')}</p>
+              <p className="mt-2 text-muted-foreground">{f('thankYou')}</p>
+            </div>
+          ) : paymentRef ? (
+            <div className="space-y-4">
+              <p className="text-sm text-muted-foreground">{f('payPrompt')}</p>
+              <PaystackButton
+                email={rhf.getValues('email') ?? ''}
+                amount={amount}
+                reference={paymentRef}
+                authorizationUrl={authUrl}
+                label={f('payNow')}
+                loadingLabel={f('submitting')}
+                onSuccess={() => {
+                  setDone(true);
+                  toast.success(f('success'));
+                }}
+                onError={(msg) => toast.error(msg)}
+              />
+              <Button type="button" variant="ghost" onClick={() => setPaymentRef(null)}>
+                {f('editDetails')}
+              </Button>
             </div>
           ) : (
             <form onSubmit={rhf.handleSubmit(onSubmit)} className="space-y-5">
@@ -204,7 +242,6 @@ export function DonateView() {
                 {submitting ? f('submitting') : f('submit')}
                 <Heart className="ml-2 h-4 w-4" />
               </Button>
-              <p className="text-center text-xs text-muted-foreground">{f('soon')}</p>
             </form>
           )}
         </motion.div>

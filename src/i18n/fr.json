@@ -438,9 +438,13 @@
       "email": "E-mail (facultatif)",
       "phone": "Téléphone (facultatif)",
       "message": "Laissez un mot (facultatif)",
-      "submit": "Donner",
+      "submit": "Continuer vers le paiement",
       "submitting": "Préparation du paiement…",
-      "soon": "L'intégration Paystack arrive prochainement.",
+      "payNow": "Payer avec Paystack",
+      "payPrompt": "Finalisez votre don en toute sécurité avec Paystack.",
+      "editDetails": "Modifier les détails",
+      "emailRequired": "L'e-mail est requis pour le paiement.",
+      "thankYou": "Merci — votre don aide à former les choristes.",
       "success": "Merci pour votre générosité.",
       "error": "Impossible de traiter le don. Veuillez réessayer."
     }
@@ -500,7 +504,40 @@
       "equipment": "Équipement",
       "donations": "Dons",
       "notifications": "Notifications",
-      "settings": "Paramètres"
+      "settings": "Paramètres",
+      "team": "Équipe"
+    }
+  },
+  "adminAnalytics": {
+    "title": "Analytique",
+    "exportCsv": "Exporter CSV",
+    "applicationsChart": "Candidatures par mois",
+    "donationsChart": "Dons dans le temps (GHS)",
+    "programsChart": "Programmes les plus demandés",
+    "attendanceChart": "Inscriptions aux événements"
+  },
+  "adminTeam": {
+    "title": "Équipe et rôles",
+    "subtitle": "Attribuez des rôles pour contrôler l'accès de chaque administrateur.",
+    "tableTitle": "Utilisateurs admin",
+    "loading": "Chargement de l'équipe…",
+    "saved": "Rôle mis à jour",
+    "forbidden": "Seuls les super administrateurs peuvent gérer les rôles.",
+    "columns": {
+      "name": "Nom",
+      "email": "E-mail",
+      "role": "Rôle"
+    },
+    "roles": {
+      "super_admin": "Super admin",
+      "admin": "Admin",
+      "editor": "Éditeur",
+      "content_manager": "Gestionnaire de contenu",
+      "workshop_coordinator": "Coordinateur d'ateliers"
+    },
+    "errors": {
+      "load": "Impossible de charger l'équipe.",
+      "save": "Impossible de mettre à jour le rôle."
     }
   },
   "adminDashboard": {
@@ -1238,6 +1275,22 @@
       "save": "Impossible d'enregistrer les paramètres {tab}. Veuillez réessayer."
     }
   },
+  "memberPortal": {
+    "loading": "Chargement du portail…",
+    "loginTitle": "Portail membre",
+    "loginHint": "Connectez-vous avec les identifiants fournis lors de l'acceptation de votre candidature.",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "signingIn": "Connexion…",
+    "signOut": "Se déconnecter",
+    "dashboardTitle": "Votre adhésion",
+    "applicationStatus": "Statut de candidature",
+    "program": "Programme",
+    "status": "Statut",
+    "upcomingEvents": "Vos inscriptions aux événements",
+    "noApplication": "Aucune candidature avec accès portail pour ce compte."
+  },
   "errorPages": {
     "notFound": {
       "title": "Cette page n'est pas au programme",
@@ -1263,6 +1316,16 @@
       "from": "De",
       "phone": "Téléphone",
       "subjectLabel": "Objet"
+    },
+    "paymentConfirmation": {
+      "subject": "Paiement reçu — merci",
+      "greeting": "Bonjour {name},",
+      "body": "Nous avons reçu votre paiement de {amount} {currency}. Référence : {reference}.",
+      "signoff": "— {siteName}"
+    },
+    "pendingApplicationsReminder": {
+      "subject": "Candidatures en attente de revue",
+      "body": "Vous avez {count} candidature(s) en attente depuis plus de 7 jours."
     }
   }
 }

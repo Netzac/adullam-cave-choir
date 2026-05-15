@@ -25,11 +25,14 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { createClient } from '@/lib/supabase/client';
 import { NotificationBellMenu } from '@/components/admin/NotificationBellMenu';
 import { useNotifications } from '@/hooks/useNotifications';
+import { canAccessNav, isSuperAdmin } from '@/lib/auth/roles';
+import type { UserRole } from '@/types/database';
 
 interface AdminUser {
   name: string;
   email: string;
   avatarUrl?: string | null;
+  role: UserRole;
 }
 
 interface AdminLayoutProps {
@@ -53,6 +56,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: '/admin/donations', labelKey: 'donations', icon: HandCoins },
   { href: '/admin/notifications', labelKey: 'notifications', icon: Bell },
   { href: '/admin/settings', labelKey: 'settings', icon: Settings },
+  { href: '/admin/team', labelKey: 'team', icon: FileText },
 ];
 
 function initials(name: string): string {
@@ -139,7 +143,10 @@ export function AdminLayout({ children, user }: AdminLayoutProps) {
         className="flex-1 overflow-y-auto px-3 py-4"
       >
         <ul className="flex flex-col gap-1">
-          {NAV_ITEMS.map((item) => {
+          {NAV_ITEMS.filter((item) => {
+            if (item.labelKey === 'team') return isSuperAdmin(user.role);
+            return canAccessNav(user.role, item.labelKey);
+          }).map((item) => {
             const active = isActive(item.href);
             const Icon = item.icon;
             const isNotifications = item.labelKey === 'notifications';
