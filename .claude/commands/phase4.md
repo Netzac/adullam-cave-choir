@@ -5,13 +5,13 @@ Build the complete admin dashboard for Adullam Cave Choir. The dashboard is acce
    - Elegant login page with choir branding
    - Email + password form
    - Supabase Auth sign in
-   - Redirect to /admin/dashboard on success
+   - Redirect to /dashboard on success
    - No public registration link
 
 2. Create middleware protection for all /admin routes
 
 ## Admin Layout
-3. Create src/components/admin/AdminLayout.tsx:
+3. Create src/components/AdminLayout.tsx:
    - Dark sidebar (collapsible on mobile)
    - Logo and "Admin Panel" label
    - Navigation: Dashboard, Applications, Events, Gallery, Blog, Equipment, Donations, Notifications, Settings
@@ -27,7 +27,7 @@ Build the complete admin dashboard for Adullam Cave Choir. The dashboard is acce
 8. Quick action buttons: New Event, View Applications, Upload Media
 
 ## Application Management
-9. /admin/applications — paginated table with:
+9. /applications — paginated table with:
    - Columns: Name, Age, Program, Status badge, Date, Actions
    - Filter by: status, program, date range
    - Search by name or email
@@ -37,35 +37,35 @@ Build the complete admin dashboard for Adullam Cave Choir. The dashboard is acce
    - Status options: Received, Under Review, Admitted, Rejected, Waitlisted
 
 ## Event Management
-10. /admin/events — list of all events with create/edit/cancel
+10. /events — list of all events with create/edit/cancel
 11. Event form: all fields, rich text description, capacity, fee in GHS
-12. /admin/events/[id] — event detail with list of applicants
+12. /events/[id] — event detail with list of applicants
 
 ## Gallery Management
-13. /admin/gallery — grid view of all media items
+13. /gallery — grid view of all media items
 14. Upload form: drag and drop photos, YouTube URL input for videos
 15. Edit item: title, description, category, featured toggle, publish toggle
 16. Bulk actions: publish, unpublish, delete
 
 ## Blog Management
-17. /admin/blog — list of posts
+17. /blog — list of posts
 18. Post editor with rich text (use a simple textarea for now, upgrade to Tiptap later)
 19. Publish/unpublish toggle
 
 ## Equipment Records
-20. /admin/equipment — list of installation records
+20. /equipment — list of installation records
 21. Create/edit form: church name, location, date, equipment types, notes
 22. Link gallery items to equipment records
 
 ## Donations
-23. /admin/donations — table of all donations with amounts and status
+23. /donations — table of all donations with amounts and status
 
 ## Notifications
-24. /admin/notifications — full list, mark all as read
+24. /notifications — full list, mark all as read
 25. Real-time updates via Supabase Realtime subscriptions
 
 ## Settings
-26. /admin/settings — update site settings stored in site_settings table:
+26. /settings — update site settings stored in site_settings table:
     - Social media URLs
     - Contact information
     - About page text

@@ -373,7 +373,7 @@ export function EquipmentRecordForm({
             {galleryLoading ? (
               <div className="flex items-center justify-center gap-2 py-8 text-sm text-muted-foreground">
                 <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-                <span>Loading…</span>
+                <span>{galleryT('loading')}</span>
               </div>
             ) : filteredGallery.length === 0 ? (
               <p className="px-2 py-6 text-center text-sm text-muted-foreground">

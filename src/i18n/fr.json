@@ -812,8 +812,10 @@
       },
       "card": {
         "selectLabel": "Sélectionner {title}",
-        "editLabel": "Modifier {title}"
-      }
+        "editLabel": "Modifier {title}",
+        "edit": "Modifier"
+      },
+      "loading": "Chargement de la galerie…"
     },
     "categoryLabel": {
       "performances": "Performances",
@@ -838,6 +840,8 @@
         "hint": "PNG, JPG ou WEBP jusqu'à 10 Mo.",
         "selected": "Sélectionné : {name}",
         "replace": "Remplacer",
+        "clear": "Effacer",
+        "chooseFile": "Choisir un fichier",
         "uploading": "Téléversement…"
       },
       "embed": {
@@ -927,6 +931,8 @@
         "label": "Rechercher des articles",
         "placeholder": "Rechercher par titre ou slug…"
       },
+      "reset": "Réinitialiser",
+      "loading": "Chargement des articles…",
       "errors": {
         "load": "Impossible de charger les articles. Veuillez actualiser.",
         "toggle": "Impossible de mettre à jour l'article. Veuillez réessayer."
@@ -977,6 +983,7 @@
       "uploadError": "Impossible de téléverser l'image. Veuillez réessayer."
     },
     "detail": {
+      "loading": "Chargement de l'article…",
       "loadError": "Impossible de charger cet article.",
       "notFound": "Article introuvable.",
       "delete": {
@@ -1010,6 +1017,8 @@
         "label": "Rechercher des registres",
         "placeholder": "Rechercher par église ou lieu…"
       },
+      "reset": "Réinitialiser",
+      "loading": "Chargement des registres…",
       "errors": {
         "load": "Impossible de charger les registres. Veuillez actualiser."
       }
@@ -1059,6 +1068,7 @@
       "gallery": {
         "empty": "Aucun élément galerie pour l'instant. Téléversez d'abord des médias dans la galerie.",
         "search": "Rechercher dans la galerie…",
+        "loading": "Chargement de la galerie…",
         "selected": "{count, plural, =0 {Aucun élément sélectionné} one {# élément lié} other {# éléments liés}}"
       },
       "submitCreate": "Créer le registre",
@@ -1070,6 +1080,7 @@
       "error": "Impossible d'enregistrer. Vérifiez le formulaire et réessayez."
     },
     "detail": {
+      "loading": "Chargement du registre…",
       "loadError": "Impossible de charger ce registre.",
       "notFound": "Registre introuvable.",
       "linkedGallery": {
@@ -1077,6 +1088,181 @@
         "subtitle": "Photos de la galerie liées à cette installation.",
         "empty": "Aucun élément galerie lié."
       }
+    }
+  },
+  "adminDonations": {
+    "title": "Dons",
+    "subtitle": "Suivez chaque don et référence de paiement en un seul endroit.",
+    "search": {
+      "label": "Rechercher des dons",
+      "placeholder": "Rechercher par nom ou e-mail…"
+    },
+    "filters": {
+      "status": "Statut",
+      "from": "Du",
+      "to": "Au",
+      "allStatuses": "Tous les statuts",
+      "reset": "Réinitialiser les filtres"
+    },
+    "summary": {
+      "total": "Total des dons",
+      "totalHint": "Somme des dons réussis (GHS)",
+      "completed": "Terminés",
+      "completedHint": "Paiements réussis",
+      "pending": "En attente",
+      "pendingHint": "En attente de confirmation"
+    },
+    "export": {
+      "csv": "Exporter CSV",
+      "filename": "dons"
+    },
+    "table": {
+      "donor": "Donateur",
+      "email": "E-mail",
+      "amount": "Montant",
+      "message": "Message",
+      "reference": "Référence de paiement",
+      "status": "Statut",
+      "date": "Date",
+      "anonymous": "Anonyme"
+    },
+    "results": {
+      "empty": "Aucun don ne correspond à vos filtres.",
+      "count": "{count, plural, one {# don} other {# dons}}"
+    },
+    "loading": "Chargement des dons…",
+    "noValue": "—",
+    "status": {
+      "pending": "En attente",
+      "completed": "Terminé",
+      "failed": "Échoué",
+      "refunded": "Remboursé"
+    },
+    "errors": {
+      "load": "Impossible de charger les dons. Veuillez actualiser."
+    }
+  },
+  "adminNotifications": {
+    "title": "Notifications",
+    "subtitle": "Suivez les candidatures, dons et messages.",
+    "bell": {
+      "label": "Ouvrir les notifications",
+      "empty": "Aucune notification pour l'instant.",
+      "markAll": "Tout marquer comme lu",
+      "viewAll": "Tout voir"
+    },
+    "filters": {
+      "all": "Toutes",
+      "unread": "Non lues",
+      "read": "Lues"
+    },
+    "actions": {
+      "markAll": "Tout marquer comme lu"
+    },
+    "list": {
+      "empty": "Vous êtes à jour.",
+      "loading": "Chargement des notifications…"
+    },
+    "relativeTime": {
+      "justNow": "À l'instant",
+      "minutes": "{count, plural, one {il y a # min} other {il y a # min}}",
+      "hours": "{count, plural, one {il y a # h} other {il y a # h}}",
+      "days": "{count, plural, one {il y a # j} other {il y a # j}}",
+      "weeks": "{count, plural, one {il y a # sem.} other {il y a # sem.}}"
+    },
+    "errors": {
+      "load": "Impossible de charger les notifications. Veuillez actualiser.",
+      "markRead": "Impossible de mettre à jour cette notification.",
+      "markAll": "Impossible de tout marquer comme lu."
+    }
+  },
+  "adminSettings": {
+    "title": "Paramètres",
+    "subtitle": "Gérez le contenu global et les coordonnées du site.",
+    "loading": "Chargement des paramètres…",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "success": "Paramètres {tab} enregistrés.",
+    "tabs": {
+      "general": "Général",
+      "social": "Réseaux sociaux",
+      "contact": "Contact",
+      "content": "Contenu"
+    },
+    "general": {
+      "title": "Général",
+      "description": "Identité du site et e-mail d'alerte admin.",
+      "fields": {
+        "siteName": "Nom du site",
+        "tagline": "Slogan",
+        "adminEmail": "E-mail de notification admin",
+        "adminEmailHint": "Reçoit les alertes pour candidatures, dons et messages."
+      }
+    },
+    "social": {
+      "title": "Réseaux sociaux",
+      "description": "Liens affichés dans le pied de page et les zones de contact.",
+      "fields": {
+        "facebook": "URL Facebook",
+        "instagram": "URL Instagram",
+        "youtube": "URL YouTube",
+        "tiktok": "URL TikTok",
+        "x": "URL X (Twitter)",
+        "whatsapp": "Numéro WhatsApp",
+        "whatsappHint": "Utilisé pour les notifications WhatsApp automatisées (phase 3)."
+      }
+    },
+    "contact": {
+      "title": "Coordonnées",
+      "description": "Comment contacter Adullam Cave Choir à Accra.",
+      "fields": {
+        "address": "Adresse de l'organisation",
+        "phone": "Téléphone",
+        "email": "E-mail public",
+        "mapsEmbed": "URL d'intégration Google Maps",
+        "mapsEmbedHint": "Collez l'URL d'intégration depuis Google Maps (Partager → Intégrer une carte)."
+      }
+    },
+    "content": {
+      "title": "Contenu des pages",
+      "description": "Remplacez le texte par défaut sur les pages publiques clés.",
+      "fields": {
+        "aboutIntro": "Introduction page À propos",
+        "howToApply": "Texte Comment postuler",
+        "homepageTagline": "Slogan page d'accueil",
+        "homepageTaglineHint": "Laissez vide pour utiliser le slogan par défaut (Général)."
+      }
+    },
+    "errors": {
+      "load": "Impossible de charger les paramètres. Veuillez actualiser.",
+      "save": "Impossible d'enregistrer les paramètres {tab}. Veuillez réessayer."
+    }
+  },
+  "errorPages": {
+    "notFound": {
+      "title": "Cette page n'est pas au programme",
+      "description": "La page que vous cherchez a peut-être été déplacée ou n'existe plus. Retournez à l'accueil pour continuer à explorer Adullam Cave Choir.",
+      "home": "Retour à l'accueil"
+    },
+    "error": {
+      "title": "Une fausse note s'est glissée",
+      "description": "Une erreur inattendue s'est produite. Veuillez réessayer ou revenir à l'accueil.",
+      "retry": "Réessayer",
+      "home": "Retour à l'accueil"
+    }
+  },
+  "emails": {
+    "applicationReceived": {
+      "subject": "Nous avons reçu votre candidature",
+      "greeting": "Bonjour {name},",
+      "body": "Merci d'avoir postulé auprès de {siteName}. Notre équipe examinera votre candidature et vous contactera bientôt.",
+      "signoff": "— {siteName}"
+    },
+    "contactAdmin": {
+      "subject": "Nouveau message : {subject}",
+      "from": "De",
+      "phone": "Téléphone",
+      "subjectLabel": "Objet"
     }
   }
 }

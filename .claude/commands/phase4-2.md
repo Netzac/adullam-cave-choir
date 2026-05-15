@@ -1,7 +1,7 @@
 Project: Adullam Cave Choir. Read CLAUDE.md for full context.
 Only work on the admin layout. Do not touch auth or pages.
 
-Create src/components/admin/AdminLayout.tsx:
+Create src/components/AdminLayout.tsx:
 - Dark sidebar with deep purple background (#0F0A1E)
 - Collapsible on mobile (hamburger toggle)
 - Logo and "Admin Panel" label at top

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { EventsView } from './EventsView';
 import { placeholderEvents, placeholderPastEvents } from '@/lib/constants/placeholders';
+import { EventsJsonLd } from '@/components/seo/EventsJsonLd';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('events.hero');
@@ -9,5 +10,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function EventsPage() {
-  return <EventsView upcoming={placeholderEvents} past={placeholderPastEvents} />;
+  return (
+    <>
+      <EventsJsonLd events={[...placeholderEvents, ...placeholderPastEvents]} />
+      <EventsView upcoming={placeholderEvents} past={placeholderPastEvents} />
+    </>
+  );
 }

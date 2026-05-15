@@ -288,6 +288,9 @@ create table if not exists public.notifications (
 create index if not exists notifications_is_read_idx on public.notifications(is_read);
 create index if not exists notifications_created_at_idx on public.notifications(created_at desc);
 
+-- Realtime (admin bell + notifications page)
+alter table public.notifications replica identity full;
+
 -- ============================================================================
 -- site_settings (key/value)
 -- ============================================================================

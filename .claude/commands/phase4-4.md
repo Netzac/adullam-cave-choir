@@ -9,7 +9,7 @@ Only work on application management pages.
    - Export to CSV button (client-side export of filtered results)
    - Click row to open detail drawer
 
-2. Create src/components/admin/ApplicationDetailDrawer.tsx:
+2. Create src/components/ApplicationDetailDrawer.tsx:
    - Slides in from right using Shadcn Sheet component
    - Full application details: all form fields
    - Passport photo display (if uploaded)

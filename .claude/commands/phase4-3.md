@@ -13,20 +13,20 @@ Create src/app/[locale]/(admin)/dashboard/page.tsx:
 
 2. Recent Applications table (last 5):
    - Columns: Name, Program, Status badge, Date
-   - "View All" link to /admin/applications
+   - "View All" link to /applications
 
 3. Upcoming Events list (next 3):
    - Title, date, venue, capacity
-   - "View All" link to /admin/events
+   - "View All" link to /events
 
 4. Quick action buttons:
-   - New Event → /admin/events/new
-   - View Applications → /admin/applications
-   - Upload Media → /admin/gallery/upload
+   - New Event → /events/new
+   - View Applications → /applications
+   - Upload Media → /gallery/upload
 
 5. Recent Notifications feed (last 5):
    - Icon, message, time ago
-   - "View All" link to /admin/notifications
+   - "View All" link to /notifications
 
 Use loading skeletons for all data sections.
 Handle empty states gracefully.

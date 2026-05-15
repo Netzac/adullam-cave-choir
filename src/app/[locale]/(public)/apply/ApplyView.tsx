@@ -4,7 +4,7 @@ import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { ArrowLeft, ArrowRight, CheckCircle2, Send } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
@@ -37,6 +37,7 @@ const stepFields: Record<Step, (keyof ApplicationInput)[]> = {
 };
 
 export function ApplyView() {
+  const locale = useLocale();
   const hero = useTranslations('apply.hero');
   const nav = useTranslations('nav');
   const steps = useTranslations('apply.steps');
@@ -89,7 +90,7 @@ export function ApplyView() {
       const res = await fetch('/api/applications', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, locale }),
       });
       if (!res.ok) throw new Error('Failed');
       setDone(true);

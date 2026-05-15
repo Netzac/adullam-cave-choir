@@ -812,8 +812,10 @@
       },
       "card": {
         "selectLabel": "Select {title}",
-        "editLabel": "Edit {title}"
-      }
+        "editLabel": "Edit {title}",
+        "edit": "Edit"
+      },
+      "loading": "Loading gallery…"
     },
     "categoryLabel": {
       "performances": "Performances",
@@ -838,6 +840,8 @@
         "hint": "PNG, JPG, or WEBP up to 10 MB.",
         "selected": "Selected: {name}",
         "replace": "Replace",
+        "clear": "Clear",
+        "chooseFile": "Choose file",
         "uploading": "Uploading…"
       },
       "embed": {
@@ -927,6 +931,8 @@
         "label": "Search posts",
         "placeholder": "Search by title or slug…"
       },
+      "reset": "Reset",
+      "loading": "Loading posts…",
       "errors": {
         "load": "We couldn't load posts. Please refresh.",
         "toggle": "Couldn't update the post. Please try again."
@@ -977,6 +983,7 @@
       "uploadError": "Couldn't upload the cover image. Please try again."
     },
     "detail": {
+      "loading": "Loading post…",
       "loadError": "We couldn't load this post.",
       "notFound": "Post not found.",
       "delete": {
@@ -1010,6 +1017,8 @@
         "label": "Search records",
         "placeholder": "Search by church or location…"
       },
+      "reset": "Reset",
+      "loading": "Loading records…",
       "errors": {
         "load": "We couldn't load equipment records. Please refresh."
       }
@@ -1059,6 +1068,7 @@
       "gallery": {
         "empty": "No gallery items yet. Upload media in the gallery first.",
         "search": "Search gallery…",
+        "loading": "Loading gallery…",
         "selected": "{count, plural, =0 {No items selected} one {# item linked} other {# items linked}}"
       },
       "submitCreate": "Create record",
@@ -1070,6 +1080,7 @@
       "error": "Couldn't save. Please review the form and try again."
     },
     "detail": {
+      "loading": "Loading record…",
       "loadError": "We couldn't load this record.",
       "notFound": "Record not found.",
       "linkedGallery": {
@@ -1077,6 +1088,181 @@
         "subtitle": "Photos from the gallery linked to this installation.",
         "empty": "No gallery items linked yet."
       }
+    }
+  },
+  "adminDonations": {
+    "title": "Donations",
+    "subtitle": "Track every gift and payment reference in one place.",
+    "search": {
+      "label": "Search donations",
+      "placeholder": "Search by donor name or email…"
+    },
+    "filters": {
+      "status": "Status",
+      "from": "From",
+      "to": "To",
+      "allStatuses": "All statuses",
+      "reset": "Reset filters"
+    },
+    "summary": {
+      "total": "Total donations",
+      "totalHint": "Sum of completed gifts (GHS)",
+      "completed": "Completed",
+      "completedHint": "Successful payments",
+      "pending": "Pending",
+      "pendingHint": "Awaiting confirmation"
+    },
+    "export": {
+      "csv": "Export CSV",
+      "filename": "donations"
+    },
+    "table": {
+      "donor": "Donor",
+      "email": "Email",
+      "amount": "Amount",
+      "message": "Message",
+      "reference": "Payment reference",
+      "status": "Status",
+      "date": "Date",
+      "anonymous": "Anonymous"
+    },
+    "results": {
+      "empty": "No donations match your filters.",
+      "count": "{count, plural, one {# donation} other {# donations}}"
+    },
+    "loading": "Loading donations…",
+    "noValue": "—",
+    "status": {
+      "pending": "Pending",
+      "completed": "Completed",
+      "failed": "Failed",
+      "refunded": "Refunded"
+    },
+    "errors": {
+      "load": "We couldn't load donations. Please refresh."
+    }
+  },
+  "adminNotifications": {
+    "title": "Notifications",
+    "subtitle": "Stay on top of applications, gifts, and messages.",
+    "bell": {
+      "label": "Open notifications",
+      "empty": "No notifications yet.",
+      "markAll": "Mark all as read",
+      "viewAll": "View all"
+    },
+    "filters": {
+      "all": "All",
+      "unread": "Unread",
+      "read": "Read"
+    },
+    "actions": {
+      "markAll": "Mark all as read"
+    },
+    "list": {
+      "empty": "You're all caught up.",
+      "loading": "Loading notifications…"
+    },
+    "relativeTime": {
+      "justNow": "Just now",
+      "minutes": "{count, plural, one {# min ago} other {# mins ago}}",
+      "hours": "{count, plural, one {# hr ago} other {# hrs ago}}",
+      "days": "{count, plural, one {# day ago} other {# days ago}}",
+      "weeks": "{count, plural, one {# wk ago} other {# wks ago}}"
+    },
+    "errors": {
+      "load": "We couldn't load notifications. Please refresh.",
+      "markRead": "Couldn't update this notification.",
+      "markAll": "Couldn't mark all as read."
+    }
+  },
+  "adminSettings": {
+    "title": "Settings",
+    "subtitle": "Manage site-wide content and contact details.",
+    "loading": "Loading settings…",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "success": "{tab} settings saved.",
+    "tabs": {
+      "general": "General",
+      "social": "Social Media",
+      "contact": "Contact Info",
+      "content": "Content"
+    },
+    "general": {
+      "title": "General",
+      "description": "Core branding and admin notification email.",
+      "fields": {
+        "siteName": "Site name",
+        "tagline": "Tagline",
+        "adminEmail": "Admin notification email",
+        "adminEmailHint": "Receives alerts for new applications, donations, and messages."
+      }
+    },
+    "social": {
+      "title": "Social media",
+      "description": "Links shown in the footer and contact areas.",
+      "fields": {
+        "facebook": "Facebook URL",
+        "instagram": "Instagram URL",
+        "youtube": "YouTube URL",
+        "tiktok": "TikTok URL",
+        "x": "X (Twitter) URL",
+        "whatsapp": "WhatsApp number",
+        "whatsappHint": "Used for automated WhatsApp notifications (Phase 3)."
+      }
+    },
+    "contact": {
+      "title": "Contact information",
+      "description": "How visitors reach Adullam Cave Choir in Accra.",
+      "fields": {
+        "address": "Organization address",
+        "phone": "Phone number",
+        "email": "Public email",
+        "mapsEmbed": "Google Maps embed URL",
+        "mapsEmbedHint": "Paste the embed URL from Google Maps (Share → Embed a map)."
+      }
+    },
+    "content": {
+      "title": "Page content",
+      "description": "Override default copy on key public pages.",
+      "fields": {
+        "aboutIntro": "About page intro",
+        "howToApply": "How to Apply text",
+        "homepageTagline": "Homepage tagline override",
+        "homepageTaglineHint": "Leave blank to use the default tagline from General."
+      }
+    },
+    "errors": {
+      "load": "We couldn't load settings. Please refresh.",
+      "save": "Couldn't save {tab} settings. Please try again."
+    }
+  },
+  "errorPages": {
+    "notFound": {
+      "title": "This page isn't in our set list",
+      "description": "The page you're looking for may have moved or no longer exists. Head back home to keep exploring Adullam Cave Choir.",
+      "home": "Back to home"
+    },
+    "error": {
+      "title": "Something went off-key",
+      "description": "We hit an unexpected error. Please try again, or return to the homepage.",
+      "retry": "Try again",
+      "home": "Back to home"
+    }
+  },
+  "emails": {
+    "applicationReceived": {
+      "subject": "We received your application",
+      "greeting": "Hi {name},",
+      "body": "Thank you for applying to {siteName}. Our team will review your application and reach out soon.",
+      "signoff": "— {siteName}"
+    },
+    "contactAdmin": {
+      "subject": "New contact form: {subject}",
+      "from": "From",
+      "phone": "Phone",
+      "subjectLabel": "Subject"
     }
   }
 }

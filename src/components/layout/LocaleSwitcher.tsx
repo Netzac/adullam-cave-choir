@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const labels: Record<Locale, string> = { en: 'English', fr: 'Français' };
+const LOCALE_STORAGE_KEY = 'adullam-preferred-locale';
 
 export function LocaleSwitcher() {
   const t = useTranslations('common');
@@ -24,6 +25,12 @@ export function LocaleSwitcher() {
 
   const onSelect = (next: Locale) => {
     if (next === currentLocale) return;
+    try {
+      localStorage.setItem(LOCALE_STORAGE_KEY, next);
+      document.cookie = `NEXT_LOCALE=${next};path=/;max-age=31536000;samesite=lax`;
+    } catch {
+      // localStorage may be unavailable in restricted contexts
+    }
     startTransition(() => router.replace(pathname, { locale: next }));
   };
 

@@ -4,6 +4,11 @@ export const routing = defineRouting({
   locales: ['en', 'fr'],
   defaultLocale: 'en',
   localePrefix: 'as-needed',
+  localeDetection: true,
+  localeCookie: {
+    name: 'NEXT_LOCALE',
+    maxAge: 60 * 60 * 24 * 365,
+  },
 });
 
 export type Locale = (typeof routing.locales)[number];

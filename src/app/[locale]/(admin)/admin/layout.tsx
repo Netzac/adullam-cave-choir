@@ -40,7 +40,6 @@ export default async function AdminGroupLayout({
         email: user.email ?? '',
         avatarUrl: metadata.avatar_url ?? null,
       }}
-      unreadNotifications={0}
     >
       {children}
     </AdminLayout>

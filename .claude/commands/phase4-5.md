@@ -14,7 +14,7 @@ Only work on event management pages.
      Is Online toggle, Status
    - react-hook-form + zod validation
    - Save to Supabase on submit
-   - Redirect to /admin/events on success
+   - Redirect to /events on success
 
 3. Create src/app/[locale]/(admin)/events/[id]/page.tsx:
    - Event details

@@ -23,6 +23,8 @@ import { cn } from '@/lib/utils/cn';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { createClient } from '@/lib/supabase/client';
+import { NotificationBellMenu } from '@/components/admin/NotificationBellMenu';
+import { useNotifications } from '@/hooks/useNotifications';
 
 interface AdminUser {
   name: string;
@@ -33,7 +35,6 @@ interface AdminUser {
 interface AdminLayoutProps {
   children: React.ReactNode;
   user: AdminUser;
-  unreadNotifications?: number;
 }
 
 interface NavItem {
@@ -63,16 +64,20 @@ function initials(name: string): string {
     .join('');
 }
 
-export function AdminLayout({
-  children,
-  user,
-  unreadNotifications = 0,
-}: AdminLayoutProps) {
+export function AdminLayout({ children, user }: AdminLayoutProps) {
   const t = useTranslations('adminLayout');
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [signingOut, setSigningOut] = React.useState(false);
+
+  const {
+    notifications,
+    unreadCount,
+    loading: notificationsLoading,
+    markAsRead,
+    markAllAsRead,
+  } = useNotifications();
 
   React.useEffect(() => {
     setMobileOpen(false);
@@ -159,12 +164,12 @@ export function AdminLayout({
                   <span className="flex-1 truncate">
                     {t(`nav.${item.labelKey}`)}
                   </span>
-                  {isNotifications && unreadNotifications > 0 ? (
+                  {isNotifications && unreadCount > 0 ? (
                     <span
-                      aria-label={t('unreadCount', { count: unreadNotifications })}
-                      className="inline-flex min-w-[1.25rem] items-center justify-center rounded-full bg-gold-500 px-1.5 text-[10px] font-semibold leading-5 text-purple-950"
+                      aria-label={t('unreadCount', { count: unreadCount })}
+                      className="inline-flex min-w-[1.25rem] items-center justify-center rounded-full bg-rose-600 px-1.5 text-[10px] font-semibold leading-5 text-white"
                     >
-                      {unreadNotifications > 99 ? '99+' : unreadNotifications}
+                      {unreadCount > 99 ? '99+' : unreadCount}
                     </span>
                   ) : null}
                 </Link>
@@ -215,33 +220,30 @@ export function AdminLayout({
       </aside>
 
       <div className="lg:pl-64">
-        <header className="sticky top-0 z-20 flex h-14 items-center justify-between gap-3 border-b border-border/60 bg-background/85 px-4 backdrop-blur lg:hidden">
-          <button
-            type="button"
-            aria-label={t('openSidebar')}
-            onClick={() => setMobileOpen(true)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/60 bg-background text-foreground/80 transition hover:bg-accent/30"
-          >
-            <Menu className="h-5 w-5" />
-          </button>
-          <Link
-            href="/admin/dashboard"
-            className="font-serif text-base font-semibold tracking-tight"
-          >
-            {t('panel')}
-          </Link>
-          <Link
-            href="/admin/notifications"
-            aria-label={t('notifications')}
-            className="relative inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/60 bg-background text-foreground/80 transition hover:bg-accent/30"
-          >
-            <Bell className="h-4.5 w-4.5" />
-            {unreadNotifications > 0 ? (
-              <span className="absolute -right-1 -top-1 inline-flex min-w-[1.1rem] items-center justify-center rounded-full bg-gold-500 px-1 text-[10px] font-semibold leading-[1.1rem] text-purple-950">
-                {unreadNotifications > 99 ? '99+' : unreadNotifications}
-              </span>
-            ) : null}
-          </Link>
+        <header className="sticky top-0 z-20 flex h-14 items-center justify-between gap-3 border-b border-border/60 bg-background/85 px-4 backdrop-blur sm:px-6 lg:px-10">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              aria-label={t('openSidebar')}
+              onClick={() => setMobileOpen(true)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/60 bg-background text-foreground/80 transition hover:bg-accent/30 lg:hidden"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+            <Link
+              href="/admin/dashboard"
+              className="font-serif text-base font-semibold tracking-tight lg:hidden"
+            >
+              {t('panel')}
+            </Link>
+          </div>
+          <NotificationBellMenu
+            notifications={notifications}
+            unreadCount={unreadCount}
+            loading={notificationsLoading}
+            onMarkAsRead={markAsRead}
+            onMarkAllAsRead={markAllAsRead}
+          />
         </header>
 
         <main className="px-4 py-6 sm:px-6 lg:px-10 lg:py-10">{children}</main>

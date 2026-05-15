@@ -258,7 +258,7 @@ export type Database = {
       };
       blog_posts: {
         Row: BlogPost;
-        Insert: Insert<BlogPost, 'is_published'>;
+        Insert: Insert<BlogPost, 'is_published' | 'published_at' | 'author_id'>;
         Update: Update<BlogPost>;
         Relationships: [];
       };

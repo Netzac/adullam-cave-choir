@@ -3,6 +3,7 @@ import { Resend } from 'resend';
 import { applicationSchema } from '@/lib/validations/applicationSchema';
 import { createAdminClient } from '@/lib/supabase/server';
 import { siteConfig } from '@/config/site';
+import { getApplicationReceivedEmail } from '@/lib/email/messages';
 
 export const runtime = 'nodejs';
 
@@ -23,6 +24,10 @@ export async function POST(request: Request) {
   }
 
   const data = parsed.data;
+  const locale =
+    typeof body === 'object' && body !== null && 'locale' in body
+      ? String((body as { locale?: string }).locale)
+      : null;
 
   const hasSupabase =
     !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -59,15 +64,12 @@ export async function POST(request: Request) {
   if (process.env.RESEND_API_KEY && data.email) {
     try {
       const resend = new Resend(process.env.RESEND_API_KEY);
+      const email = getApplicationReceivedEmail(locale, data.full_name);
       await resend.emails.send({
         from: `${siteConfig.name} <${siteConfig.contact.email}>`,
         to: data.email,
-        subject: 'We received your application',
-        html: `
-          <p>Hi ${data.full_name},</p>
-          <p>Thank you for applying to ${siteConfig.name}. Our team will review your application and reach out soon.</p>
-          <p>— ${siteConfig.name}</p>
-        `,
+        subject: email.subject,
+        html: email.html,
       });
     } catch (err) {
       console.error('[api/applications] email failed', err);

@@ -184,7 +184,7 @@ export default function AdminBlogPage() {
                 className="gap-1.5 text-muted-foreground"
               >
                 <X className="h-4 w-4" aria-hidden />
-                Reset
+                {t('reset')}
               </Button>
             ) : null}
           </div>
@@ -194,7 +194,7 @@ export default function AdminBlogPage() {
       <Card>
         <CardContent className="p-0">
           {loading ? (
-            <LoadingState />
+            <LoadingState message={t('loading')} />
           ) : loadError ? (
             <ErrorState message={loadError} />
           ) : filtered.length === 0 ? (
@@ -301,11 +301,11 @@ export default function AdminBlogPage() {
   );
 }
 
-function LoadingState() {
+function LoadingState({ message }: { message: string }) {
   return (
     <div className="flex items-center justify-center gap-2 px-6 py-16 text-sm text-muted-foreground">
       <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-      <span>Loading…</span>
+      <span>{message}</span>
     </div>
   );
 }

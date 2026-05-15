@@ -5,14 +5,14 @@ Only work on authentication. Do not touch any other files.
    - Elegant login page with choir branding (purple/gold)
    - Email + password form using react-hook-form + zod
    - Supabase Auth sign in
-   - Redirect to /admin/dashboard on success
+   - Redirect to /dashboard on success
    - Show error message on failed login
    - No public registration link
    - Responsive, centered card layout
 
 2. Create middleware protection:
-   - Update middleware.ts to protect all /admin/* routes
+   - Update middleware.ts to protect all /* routes
    - Redirect unauthenticated users to /login
-   - Allow /admin/login through without auth check
+   - Allow /login through without auth check
 
 When done run npm run typecheck and fix any errors.

@@ -17,6 +17,7 @@ import {
   placeholderBlog,
 } from '@/lib/constants/placeholders';
 import { siteConfig } from '@/config/site';
+import { OrganizationJsonLd } from '@/components/seo/OrganizationJsonLd';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('home.hero');
@@ -36,6 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function HomePage() {
   return (
     <>
+      <OrganizationJsonLd />
       <HeroSection />
       <MissionStrip />
       <AboutPreview />

@@ -326,7 +326,7 @@ export default function AdminGalleryUploadPage() {
                         className="gap-1.5 text-muted-foreground"
                       >
                         <X className="h-4 w-4" aria-hidden />
-                        Clear
+                        {dropzoneT('clear')}
                       </Button>
                     </div>
                   </>
@@ -350,7 +350,7 @@ export default function AdminGalleryUploadPage() {
                       className="mt-2"
                     >
                       <label className="cursor-pointer">
-                        Choose file
+                        {dropzoneT('chooseFile')}
                         <input
                           type="file"
                           accept="image/png,image/jpeg,image/webp"

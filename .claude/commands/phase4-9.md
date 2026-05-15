@@ -6,13 +6,13 @@ Only work on notifications system.
    - Return: notifications list, unread count, markAsRead, markAllAsRead
    - Filter to only current admin's notifications
 
-2. Update src/components/admin/AdminLayout.tsx:
+2. Update src/components/AdminLayout.tsx:
    - Import and use useNotifications hook
    - Show red badge on bell icon with unread count
    - Dropdown on bell click showing last 5 notifications
    - Each notification: icon, message, time ago, read/unread style
    - "Mark all as read" button in dropdown
-   - "View All" link to /admin/notifications
+   - "View All" link to /notifications
 
 3. Create src/app/[locale]/(admin)/notifications/page.tsx:
    - Full list of all notifications

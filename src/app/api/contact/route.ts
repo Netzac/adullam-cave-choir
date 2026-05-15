@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { contactSchema } from '@/lib/validations/contactSchema';
 import { siteConfig } from '@/config/site';
+import { getContactAdminEmail } from '@/lib/email/messages';
 
 export const runtime = 'nodejs';
 
@@ -26,18 +27,13 @@ export async function POST(request: Request) {
   if (process.env.RESEND_API_KEY) {
     try {
       const resend = new Resend(process.env.RESEND_API_KEY);
+      const email = getContactAdminEmail(data);
       await resend.emails.send({
         from: `${siteConfig.name} <${siteConfig.contact.email}>`,
         to: siteConfig.contact.email,
         replyTo: data.email,
-        subject: `New contact form: ${data.subject}`,
-        html: `
-          <p><strong>From:</strong> ${data.full_name} &lt;${data.email}&gt;</p>
-          ${data.phone ? `<p><strong>Phone:</strong> ${data.phone}</p>` : ''}
-          <p><strong>Subject:</strong> ${data.subject}</p>
-          <hr />
-          <p>${data.message.replace(/\n/g, '<br/>')}</p>
-        `,
+        subject: email.subject,
+        html: email.html,
       });
     } catch (err) {
       console.error('[api/contact] email failed', err);

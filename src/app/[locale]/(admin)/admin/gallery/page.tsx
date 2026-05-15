@@ -359,7 +359,7 @@ export default function AdminGalleryPage() {
       ) : null}
 
       {loading ? (
-        <LoadingState />
+        <LoadingState message={t('loading')} />
       ) : loadError ? (
         <ErrorState message={loadError} />
       ) : filtered.length === 0 ? (
@@ -477,7 +477,7 @@ export default function AdminGalleryPage() {
                     className="mt-1 gap-1.5"
                   >
                     <Pencil className="h-3.5 w-3.5" aria-hidden />
-                    Edit
+                    {cardT('edit')}
                   </Button>
                 </div>
               </article>
@@ -539,11 +539,11 @@ export default function AdminGalleryPage() {
 // State helpers
 // ─────────────────────────────────────────────────────────────────────────────
 
-function LoadingState() {
+function LoadingState({ message }: { message: string }) {
   return (
     <div className="flex items-center justify-center gap-2 px-6 py-16 text-sm text-muted-foreground">
       <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-      <span>Loading…</span>
+      <span>{message}</span>
     </div>
   );
 }

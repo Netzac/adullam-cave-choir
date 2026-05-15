@@ -5,7 +5,6 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/config/site';
-import { RootLayout as Shell } from '@/components/layout/RootLayout';
 import '../globals.css';
 
 const inter = Inter({
@@ -32,15 +31,34 @@ export const metadata: Metadata = {
     'Worship',
     'Choristers',
     'Music Training Ghana',
+    'Ghana choir',
+    'worship training',
   ],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
   openGraph: {
     type: 'website',
     locale: 'en_GH',
+    alternateLocale: ['fr_GH'],
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
   },
-  twitter: { card: 'summary_large_image', title: siteConfig.name },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  robots: { index: true, follow: true },
 };
 
 export function generateStaticParams() {
@@ -68,7 +86,7 @@ export default async function LocaleLayout({
     >
       <body className="min-h-screen bg-background font-sans antialiased">
         <NextIntlClientProvider messages={messages} locale={params.locale}>
-          <Shell locale={params.locale}>{children}</Shell>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

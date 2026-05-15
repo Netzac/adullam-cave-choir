@@ -16,7 +16,7 @@ Only work on gallery management pages.
    - Featured toggle, Published toggle
    - Save to gallery_items table on submit
 
-3. Create src/components/admin/GalleryItemEditDialog.tsx:
+3. Create src/components/GalleryItemEditDialog.tsx:
    - Dialog for editing existing gallery items
    - Edit: title, description, category, featured, published
    - Delete button with confirmation

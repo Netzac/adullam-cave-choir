@@ -38,7 +38,7 @@ Implement the full notification system for Adullam Cave Choir:
    - Show red badge with unread count
    - Dropdown showing last 5 notifications
    - Click to mark as read
-   - "View All" link to /admin/notifications
+   - "View All" link to /notifications
 
 ## Trigger Notifications
 8. Update these API routes to trigger full notification chain:
