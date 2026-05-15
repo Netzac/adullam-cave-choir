@@ -482,5 +482,601 @@
       "unexpected": "Something went wrong. Please try again.",
       "footnote": "Access is restricted to authorized administrators."
     }
+  },
+  "adminLayout": {
+    "panel": "Admin Panel",
+    "openSidebar": "Open sidebar",
+    "closeSidebar": "Close sidebar",
+    "notifications": "Notifications",
+    "unreadCount": "{count} unread",
+    "signOut": "Sign out",
+    "signingOut": "Signing out…",
+    "nav": {
+      "dashboard": "Dashboard",
+      "applications": "Applications",
+      "events": "Events",
+      "gallery": "Gallery",
+      "blog": "Blog",
+      "equipment": "Equipment",
+      "donations": "Donations",
+      "notifications": "Notifications",
+      "settings": "Settings"
+    }
+  },
+  "adminDashboard": {
+    "title": "Dashboard",
+    "subtitle": "A snapshot of activity across the choir.",
+    "welcome": "Welcome back, {name}.",
+    "viewAll": "View all",
+    "stats": {
+      "applications": "Total Applications",
+      "applicationsHint": "All-time submissions",
+      "pending": "Pending Review",
+      "pendingHint": "Awaiting decision",
+      "events": "Upcoming Events",
+      "eventsHint": "Scheduled from today",
+      "gallery": "Gallery Items",
+      "galleryHint": "Published media",
+      "donations": "Total Donations",
+      "donationsHint": "Successful contributions",
+      "trendUp": "{value} this month",
+      "trendFlat": "No change this month",
+      "trendDown": "{value} this month"
+    },
+    "applications": {
+      "title": "Recent Applications",
+      "description": "The five most recent submissions.",
+      "name": "Name",
+      "program": "Program",
+      "status": "Status",
+      "date": "Submitted",
+      "empty": "No applications yet."
+    },
+    "events": {
+      "title": "Upcoming Events",
+      "description": "The next three scheduled events.",
+      "capacity": "{count, plural, =0 {Unlimited seats} one {# seat} other {# seats}}",
+      "empty": "No upcoming events."
+    },
+    "quickActions": {
+      "title": "Quick actions",
+      "description": "Jump straight to the things you do most.",
+      "newEvent": "New Event",
+      "viewApplications": "View Applications",
+      "uploadMedia": "Upload Media"
+    },
+    "notifications": {
+      "title": "Recent Notifications",
+      "description": "Latest activity from across the site.",
+      "empty": "You're all caught up."
+    },
+    "applicationStatus": {
+      "pending": "Pending",
+      "reviewing": "Reviewing",
+      "shortlisted": "Shortlisted",
+      "accepted": "Accepted",
+      "rejected": "Rejected",
+      "waitlisted": "Waitlisted"
+    },
+    "errors": {
+      "load": "We couldn't load this section. Please refresh."
+    },
+    "relativeTime": {
+      "justNow": "Just now",
+      "minutes": "{count, plural, one {# minute ago} other {# minutes ago}}",
+      "hours": "{count, plural, one {# hour ago} other {# hours ago}}",
+      "days": "{count, plural, one {# day ago} other {# days ago}}",
+      "weeks": "{count, plural, one {# week ago} other {# weeks ago}}"
+    }
+  },
+  "adminApplications": {
+    "title": "Applications",
+    "subtitle": "Review and decide on every applicant from one place.",
+    "search": {
+      "placeholder": "Search by name or email…",
+      "label": "Search applications"
+    },
+    "filters": {
+      "status": "Status",
+      "program": "Program",
+      "from": "From",
+      "to": "To",
+      "allStatuses": "All statuses",
+      "allPrograms": "All programs",
+      "reset": "Reset filters"
+    },
+    "export": {
+      "csv": "Export CSV",
+      "filename": "applications"
+    },
+    "table": {
+      "name": "Name",
+      "age": "Age",
+      "program": "Program",
+      "status": "Status",
+      "date": "Submitted",
+      "actions": "Actions",
+      "view": "View",
+      "openRow": "Open application for {name}"
+    },
+    "results": {
+      "showing": "Showing {from}–{to} of {total}",
+      "empty": "No applications match your filters."
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {page} of {totalPages}"
+    },
+    "status": {
+      "received": "Received",
+      "underReview": "Under Review",
+      "shortlisted": "Shortlisted",
+      "admitted": "Admitted",
+      "rejected": "Rejected",
+      "waitlisted": "Waitlisted"
+    },
+    "drawer": {
+      "title": "Application details",
+      "subtitle": "Submitted {date}",
+      "sections": {
+        "applicant": "Applicant",
+        "program": "Program interest",
+        "consent": "Consent & notes",
+        "review": "Review"
+      },
+      "fields": {
+        "fullName": "Full name",
+        "age": "Age",
+        "phone": "Phone",
+        "email": "Email",
+        "passportPhoto": "Passport photo",
+        "interestLevel": "Interest level",
+        "preferredProgram": "Preferred program",
+        "experience": "Experience",
+        "guardianConsent": "Guardian consent",
+        "applicantNotes": "Applicant's notes",
+        "status": "Status",
+        "internalNotes": "Internal notes",
+        "submittedAt": "Submitted",
+        "updatedAt": "Last updated"
+      },
+      "consent": {
+        "given": "Provided",
+        "notGiven": "Not provided"
+      },
+      "noPhoto": "No passport photo uploaded.",
+      "internalNotesPlaceholder": "Add notes for the team. Visible only to admins.",
+      "noValue": "—",
+      "save": "Save changes",
+      "saving": "Saving…",
+      "close": "Close",
+      "saved": "Application updated.",
+      "saveError": "Couldn't save changes. Please try again.",
+      "loadError": "We couldn't load this application."
+    }
+  },
+  "adminEvents": {
+    "list": {
+      "title": "Events",
+      "subtitle": "Plan, publish, and manage every gathering.",
+      "createCta": "Create New Event",
+      "empty": "No events yet. Start by creating one.",
+      "actions": {
+        "edit": "Edit",
+        "cancel": "Cancel event",
+        "view": "View"
+      },
+      "search": {
+        "placeholder": "Search by title or venue…",
+        "label": "Search events"
+      },
+      "filters": {
+        "status": "Status",
+        "allStatuses": "All statuses"
+      },
+      "table": {
+        "title": "Event",
+        "date": "Date",
+        "venue": "Venue",
+        "status": "Status",
+        "applicants": "Applicants",
+        "actions": "Actions"
+      },
+      "errors": {
+        "load": "We couldn't load events. Please refresh.",
+        "cancel": "Couldn't cancel this event. Please try again."
+      },
+      "cancelled": "Event cancelled."
+    },
+    "displayStatus": {
+      "upcoming": "Upcoming",
+      "ongoing": "Ongoing",
+      "cancelled": "Cancelled",
+      "past": "Past",
+      "draft": "Draft"
+    },
+    "dbStatus": {
+      "draft": "Draft",
+      "scheduled": "Scheduled",
+      "live": "Live",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "form": {
+      "newTitle": "Create new event",
+      "newSubtitle": "Add a workshop, masterclass, or worship night to the public calendar.",
+      "editTitle": "Edit event",
+      "editSubtitle": "Update the details below and save.",
+      "fields": {
+        "title": "Title",
+        "description": "Description",
+        "audience": "Target audience",
+        "date": "Date",
+        "time": "Time",
+        "venue": "Venue",
+        "capacity": "Capacity",
+        "fee": "Fee (GHS)",
+        "isOnline": "Online event",
+        "isOnlineHint": "Toggle on if this happens entirely online.",
+        "status": "Status"
+      },
+      "placeholders": {
+        "title": "e.g. Worship Leader Masterclass",
+        "description": "What is this event about? Who should attend?",
+        "audience": "e.g. Worship leaders and teams",
+        "venue": "e.g. Adullam Cave HQ, Accra",
+        "capacity": "Leave blank for unlimited"
+      },
+      "submitCreate": "Create event",
+      "submitUpdate": "Save changes",
+      "submitting": "Saving…",
+      "cancel": "Cancel",
+      "successCreate": "Event created.",
+      "successUpdate": "Event updated.",
+      "error": "Couldn't save. Please review the form and try again."
+    },
+    "detail": {
+      "title": "Event details",
+      "back": "Back to events",
+      "applicants": {
+        "title": "Applicants",
+        "subtitle": "Everyone who signed up for this event.",
+        "name": "Name",
+        "organization": "Organization",
+        "email": "Email",
+        "phone": "Phone",
+        "status": "Status",
+        "submitted": "Submitted",
+        "empty": "No applicants yet."
+      },
+      "applicantStatus": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "attended": "Attended",
+        "cancelled": "Cancelled",
+        "declined": "Declined"
+      },
+      "cancelEvent": {
+        "trigger": "Cancel event",
+        "title": "Cancel this event?",
+        "description": "This will set the event's status to Cancelled. Applicants will no longer see it on the public site.",
+        "confirm": "Yes, cancel event",
+        "abort": "Keep event"
+      },
+      "loadError": "We couldn't load this event.",
+      "notFound": "Event not found."
+    }
+  },
+  "adminGallery": {
+    "list": {
+      "title": "Gallery",
+      "subtitle": "Curate every photo and video shown across the site.",
+      "uploadCta": "Upload New",
+      "empty": "No media here yet. Upload your first item to get started.",
+      "errors": {
+        "load": "We couldn't load gallery items. Please refresh.",
+        "bulk": "Some items couldn't be updated. Please try again.",
+        "delete": "Some items couldn't be deleted. Please try again."
+      },
+      "search": {
+        "placeholder": "Search by title…",
+        "label": "Search gallery"
+      },
+      "categories": {
+        "all": "All",
+        "programs": "Programs",
+        "installations": "Installations",
+        "events": "Events"
+      },
+      "labels": {
+        "published": "Published",
+        "draft": "Draft",
+        "featured": "Featured",
+        "video": "Video",
+        "image": "Image"
+      },
+      "bulk": {
+        "selected": "{count, plural, one {# item selected} other {# items selected}}",
+        "publish": "Publish",
+        "unpublish": "Unpublish",
+        "delete": "Delete",
+        "clear": "Clear selection",
+        "selectAll": "Select all",
+        "publishedCount": "Updated {count} {count, plural, one {item} other {items}}.",
+        "deletedCount": "Deleted {count} {count, plural, one {item} other {items}}.",
+        "confirmDeleteTitle": "Delete selected items?",
+        "confirmDeleteBody": "This will permanently remove {count} {count, plural, one {item} other {items}} from the gallery. This cannot be undone.",
+        "confirmDelete": "Yes, delete",
+        "abort": "Cancel"
+      },
+      "card": {
+        "selectLabel": "Select {title}",
+        "editLabel": "Edit {title}"
+      }
+    },
+    "categoryLabel": {
+      "performances": "Performances",
+      "rehearsals": "Rehearsals",
+      "workshops": "Workshops",
+      "equipment": "Equipment",
+      "events": "Events",
+      "community": "Community"
+    },
+    "upload": {
+      "title": "Upload media",
+      "subtitle": "Add a new photo, uploaded video, or external embed to the gallery.",
+      "back": "Back to gallery",
+      "sourceLabel": "Media source",
+      "sources": {
+        "image": "Upload photo",
+        "embed": "YouTube or Vimeo URL"
+      },
+      "dropzone": {
+        "idle": "Drag and drop a photo here, or click to choose a file.",
+        "active": "Drop the photo to attach it.",
+        "hint": "PNG, JPG, or WEBP up to 10 MB.",
+        "selected": "Selected: {name}",
+        "replace": "Replace",
+        "uploading": "Uploading…"
+      },
+      "embed": {
+        "label": "Video URL",
+        "placeholder": "https://youtube.com/watch?v=… or https://vimeo.com/…",
+        "hint": "Paste a YouTube or Vimeo link. We'll auto-detect the type.",
+        "preview": "Preview",
+        "invalid": "We couldn't recognize that link. Use a YouTube or Vimeo URL."
+      },
+      "fields": {
+        "title": "Title",
+        "description": "Description",
+        "category": "Category",
+        "dateTaken": "Date taken",
+        "isFeatured": "Featured",
+        "isFeaturedHint": "Featured items appear in the homepage gallery preview.",
+        "isPublished": "Published",
+        "isPublishedHint": "Unpublish to keep this item hidden from the public site."
+      },
+      "placeholders": {
+        "title": "e.g. Sunday rehearsal",
+        "description": "What's happening in this photo or video?"
+      },
+      "submit": "Save to gallery",
+      "submitting": "Saving…",
+      "cancel": "Cancel",
+      "success": "Item added to the gallery.",
+      "errors": {
+        "noMedia": "Attach a photo or paste a YouTube/Vimeo URL first.",
+        "invalidFileType": "That file type isn't supported. Use PNG, JPG, or WEBP.",
+        "tooLarge": "That file is too large. Keep it under 10 MB.",
+        "uploadFailed": "Upload failed. Please try again.",
+        "saveFailed": "Couldn't save the item. Please try again."
+      }
+    },
+    "edit": {
+      "title": "Edit item",
+      "fields": {
+        "title": "Title",
+        "description": "Description",
+        "category": "Category",
+        "isFeatured": "Featured",
+        "isPublished": "Published"
+      },
+      "save": "Save changes",
+      "saving": "Saving…",
+      "saved": "Item updated.",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleting": "Deleting…",
+      "deleted": "Item deleted.",
+      "deleteConfirm": {
+        "title": "Delete this item?",
+        "description": "This will permanently remove the item from the gallery and cannot be undone.",
+        "confirm": "Yes, delete",
+        "abort": "Keep item"
+      },
+      "errors": {
+        "save": "Couldn't save changes. Please try again.",
+        "delete": "Couldn't delete the item. Please try again."
+      }
+    }
+  },
+  "adminBlog": {
+    "list": {
+      "title": "Blog",
+      "subtitle": "Write, edit, and publish posts for the public site.",
+      "createCta": "New Post",
+      "empty": "No posts yet. Write your first one to get started.",
+      "table": {
+        "title": "Title",
+        "status": "Status",
+        "publishedDate": "Published",
+        "actions": "Actions"
+      },
+      "status": {
+        "published": "Published",
+        "draft": "Draft"
+      },
+      "actions": {
+        "edit": "Edit",
+        "publish": "Publish",
+        "unpublish": "Unpublish"
+      },
+      "publishedAt": "Not published",
+      "search": {
+        "label": "Search posts",
+        "placeholder": "Search by title or slug…"
+      },
+      "errors": {
+        "load": "We couldn't load posts. Please refresh.",
+        "toggle": "Couldn't update the post. Please try again."
+      },
+      "toggleSuccess": {
+        "published": "Post published.",
+        "unpublished": "Post unpublished."
+      }
+    },
+    "form": {
+      "newTitle": "New blog post",
+      "newSubtitle": "Compose a new article. You can save it as a draft and publish later.",
+      "editTitle": "Edit blog post",
+      "editSubtitle": "Update the post below and save.",
+      "back": "Back to blog",
+      "fields": {
+        "title": "Title",
+        "slug": "URL slug",
+        "slugHint": "Auto-generated from the title. You can override it.",
+        "excerpt": "Excerpt",
+        "excerptHint": "A short summary shown in listings (optional).",
+        "content": "Content",
+        "coverImage": "Cover image",
+        "isPublished": "Published",
+        "isPublishedHint": "Toggle on to make this post visible on the public site."
+      },
+      "placeholders": {
+        "title": "e.g. Behind the scenes of our latest worship night",
+        "slug": "behind-the-scenes",
+        "excerpt": "Give readers a one-line teaser…",
+        "content": "Write your post here…"
+      },
+      "cover": {
+        "idle": "Click to upload a cover image",
+        "active": "Drop the image to attach it",
+        "hint": "PNG, JPG, or WEBP up to 10 MB.",
+        "replace": "Replace",
+        "remove": "Remove",
+        "uploading": "Uploading…"
+      },
+      "submitCreate": "Create post",
+      "submitUpdate": "Save changes",
+      "submitting": "Saving…",
+      "cancel": "Cancel",
+      "successCreate": "Post created.",
+      "successUpdate": "Post updated.",
+      "error": "Couldn't save. Please review the form and try again.",
+      "uploadError": "Couldn't upload the cover image. Please try again."
+    },
+    "detail": {
+      "loadError": "We couldn't load this post.",
+      "notFound": "Post not found.",
+      "delete": {
+        "trigger": "Delete post",
+        "title": "Delete this post?",
+        "description": "This will permanently remove the post. This cannot be undone.",
+        "confirm": "Yes, delete",
+        "abort": "Keep post",
+        "success": "Post deleted.",
+        "error": "Couldn't delete the post. Please try again."
+      }
+    }
+  },
+  "adminEquipment": {
+    "list": {
+      "title": "Equipment Records",
+      "subtitle": "Track every installation and service across churches and institutions.",
+      "createCta": "New Record",
+      "empty": "No records yet. Log your first installation to get started.",
+      "table": {
+        "church": "Church",
+        "location": "Location",
+        "serviceDate": "Service date",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "actions": {
+        "edit": "Edit"
+      },
+      "search": {
+        "label": "Search records",
+        "placeholder": "Search by church or location…"
+      },
+      "errors": {
+        "load": "We couldn't load equipment records. Please refresh."
+      }
+    },
+    "status": {
+      "planned": "Planned",
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "maintenance": "Maintenance"
+    },
+    "form": {
+      "newTitle": "New equipment record",
+      "newSubtitle": "Log a new installation or service appointment.",
+      "editTitle": "Edit equipment record",
+      "editSubtitle": "Update the installation details and gallery links.",
+      "back": "Back to records",
+      "fields": {
+        "churchName": "Church / Institution",
+        "location": "Location",
+        "serviceDate": "Service date",
+        "equipmentTypes": "Equipment types",
+        "equipmentTypesHint": "Pick everything that was installed or serviced.",
+        "notes": "Internal notes",
+        "notesHint": "Notes for the team (not shown publicly).",
+        "status": "Status",
+        "gallery": "Linked gallery items",
+        "galleryHint": "Pick photos from the gallery that document this installation."
+      },
+      "placeholders": {
+        "churchName": "e.g. Adullam Faith Cathedral",
+        "location": "e.g. East Legon, Accra",
+        "notes": "Anything the team should remember about this installation…"
+      },
+      "equipmentTypes": {
+        "speakers": "Speakers",
+        "microphones": "Microphones",
+        "mixers": "Mixers",
+        "amplifiers": "Amplifiers",
+        "monitors": "Stage monitors",
+        "instruments": "Instruments",
+        "lighting": "Lighting",
+        "cabling": "Cabling",
+        "acoustic": "Acoustic treatment",
+        "projectors": "Projectors / Screens",
+        "other": "Other"
+      },
+      "gallery": {
+        "empty": "No gallery items yet. Upload media in the gallery first.",
+        "search": "Search gallery…",
+        "selected": "{count, plural, =0 {No items selected} one {# item linked} other {# items linked}}"
+      },
+      "submitCreate": "Create record",
+      "submitUpdate": "Save changes",
+      "submitting": "Saving…",
+      "cancel": "Cancel",
+      "successCreate": "Record created.",
+      "successUpdate": "Record updated.",
+      "error": "Couldn't save. Please review the form and try again."
+    },
+    "detail": {
+      "loadError": "We couldn't load this record.",
+      "notFound": "Record not found.",
+      "linkedGallery": {
+        "title": "Linked gallery",
+        "subtitle": "Photos from the gallery linked to this installation.",
+        "empty": "No gallery items linked yet."
+      }
+    }
   }
 }

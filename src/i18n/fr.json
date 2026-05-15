@@ -482,5 +482,601 @@
       "unexpected": "Une erreur est survenue. Veuillez réessayer.",
       "footnote": "L'accès est réservé aux administrateurs autorisés."
     }
+  },
+  "adminLayout": {
+    "panel": "Panneau admin",
+    "openSidebar": "Ouvrir la barre latérale",
+    "closeSidebar": "Fermer la barre latérale",
+    "notifications": "Notifications",
+    "unreadCount": "{count} non lus",
+    "signOut": "Se déconnecter",
+    "signingOut": "Déconnexion…",
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "applications": "Candidatures",
+      "events": "Événements",
+      "gallery": "Galerie",
+      "blog": "Blog",
+      "equipment": "Équipement",
+      "donations": "Dons",
+      "notifications": "Notifications",
+      "settings": "Paramètres"
+    }
+  },
+  "adminDashboard": {
+    "title": "Tableau de bord",
+    "subtitle": "Un aperçu de l'activité de la chorale.",
+    "welcome": "Bon retour, {name}.",
+    "viewAll": "Tout voir",
+    "stats": {
+      "applications": "Total des candidatures",
+      "applicationsHint": "Soumissions cumulées",
+      "pending": "À examiner",
+      "pendingHint": "En attente de décision",
+      "events": "Événements à venir",
+      "eventsHint": "Programmés à partir d'aujourd'hui",
+      "gallery": "Éléments de galerie",
+      "galleryHint": "Médias publiés",
+      "donations": "Total des dons",
+      "donationsHint": "Contributions réussies",
+      "trendUp": "{value} ce mois-ci",
+      "trendFlat": "Aucune variation ce mois-ci",
+      "trendDown": "{value} ce mois-ci"
+    },
+    "applications": {
+      "title": "Candidatures récentes",
+      "description": "Les cinq soumissions les plus récentes.",
+      "name": "Nom",
+      "program": "Programme",
+      "status": "Statut",
+      "date": "Soumis le",
+      "empty": "Aucune candidature pour le moment."
+    },
+    "events": {
+      "title": "Événements à venir",
+      "description": "Les trois prochains événements prévus.",
+      "capacity": "{count, plural, =0 {Places illimitées} one {# place} other {# places}}",
+      "empty": "Aucun événement à venir."
+    },
+    "quickActions": {
+      "title": "Actions rapides",
+      "description": "Accédez directement à vos tâches courantes.",
+      "newEvent": "Nouvel événement",
+      "viewApplications": "Voir les candidatures",
+      "uploadMedia": "Téléverser des médias"
+    },
+    "notifications": {
+      "title": "Notifications récentes",
+      "description": "Dernière activité sur l'ensemble du site.",
+      "empty": "Vous êtes à jour."
+    },
+    "applicationStatus": {
+      "pending": "En attente",
+      "reviewing": "En examen",
+      "shortlisted": "Présélectionné",
+      "accepted": "Accepté",
+      "rejected": "Refusé",
+      "waitlisted": "Liste d'attente"
+    },
+    "errors": {
+      "load": "Impossible de charger cette section. Veuillez actualiser."
+    },
+    "relativeTime": {
+      "justNow": "À l'instant",
+      "minutes": "{count, plural, one {il y a # minute} other {il y a # minutes}}",
+      "hours": "{count, plural, one {il y a # heure} other {il y a # heures}}",
+      "days": "{count, plural, one {il y a # jour} other {il y a # jours}}",
+      "weeks": "{count, plural, one {il y a # semaine} other {il y a # semaines}}"
+    }
+  },
+  "adminApplications": {
+    "title": "Candidatures",
+    "subtitle": "Examinez et décidez de chaque candidat depuis un seul endroit.",
+    "search": {
+      "placeholder": "Rechercher par nom ou e-mail…",
+      "label": "Rechercher des candidatures"
+    },
+    "filters": {
+      "status": "Statut",
+      "program": "Programme",
+      "from": "Du",
+      "to": "Au",
+      "allStatuses": "Tous les statuts",
+      "allPrograms": "Tous les programmes",
+      "reset": "Réinitialiser"
+    },
+    "export": {
+      "csv": "Exporter CSV",
+      "filename": "candidatures"
+    },
+    "table": {
+      "name": "Nom",
+      "age": "Âge",
+      "program": "Programme",
+      "status": "Statut",
+      "date": "Soumis le",
+      "actions": "Actions",
+      "view": "Voir",
+      "openRow": "Ouvrir la candidature de {name}"
+    },
+    "results": {
+      "showing": "Affichage de {from}–{to} sur {total}",
+      "empty": "Aucune candidature ne correspond à vos filtres."
+    },
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page {page} sur {totalPages}"
+    },
+    "status": {
+      "received": "Reçue",
+      "underReview": "En examen",
+      "shortlisted": "Présélectionné",
+      "admitted": "Admis",
+      "rejected": "Refusé",
+      "waitlisted": "Liste d'attente"
+    },
+    "drawer": {
+      "title": "Détails de la candidature",
+      "subtitle": "Soumis le {date}",
+      "sections": {
+        "applicant": "Candidat",
+        "program": "Programme",
+        "consent": "Consentement et notes",
+        "review": "Examen"
+      },
+      "fields": {
+        "fullName": "Nom complet",
+        "age": "Âge",
+        "phone": "Téléphone",
+        "email": "E-mail",
+        "passportPhoto": "Photo d'identité",
+        "interestLevel": "Niveau d'intérêt",
+        "preferredProgram": "Programme préféré",
+        "experience": "Expérience",
+        "guardianConsent": "Consentement du tuteur",
+        "applicantNotes": "Notes du candidat",
+        "status": "Statut",
+        "internalNotes": "Notes internes",
+        "submittedAt": "Soumis le",
+        "updatedAt": "Dernière mise à jour"
+      },
+      "consent": {
+        "given": "Fourni",
+        "notGiven": "Non fourni"
+      },
+      "noPhoto": "Aucune photo d'identité téléversée.",
+      "internalNotesPlaceholder": "Ajoutez des notes pour l'équipe. Visibles seulement par les admins.",
+      "noValue": "—",
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "close": "Fermer",
+      "saved": "Candidature mise à jour.",
+      "saveError": "Impossible d'enregistrer. Veuillez réessayer.",
+      "loadError": "Impossible de charger cette candidature."
+    }
+  },
+  "adminEvents": {
+    "list": {
+      "title": "Événements",
+      "subtitle": "Planifiez, publiez et gérez chaque rassemblement.",
+      "createCta": "Créer un événement",
+      "empty": "Aucun événement pour l'instant. Commencez par en créer un.",
+      "actions": {
+        "edit": "Modifier",
+        "cancel": "Annuler l'événement",
+        "view": "Voir"
+      },
+      "search": {
+        "placeholder": "Rechercher par titre ou lieu…",
+        "label": "Rechercher des événements"
+      },
+      "filters": {
+        "status": "Statut",
+        "allStatuses": "Tous les statuts"
+      },
+      "table": {
+        "title": "Événement",
+        "date": "Date",
+        "venue": "Lieu",
+        "status": "Statut",
+        "applicants": "Inscrits",
+        "actions": "Actions"
+      },
+      "errors": {
+        "load": "Impossible de charger les événements. Veuillez actualiser.",
+        "cancel": "Impossible d'annuler cet événement. Veuillez réessayer."
+      },
+      "cancelled": "Événement annulé."
+    },
+    "displayStatus": {
+      "upcoming": "À venir",
+      "ongoing": "En cours",
+      "cancelled": "Annulé",
+      "past": "Passé",
+      "draft": "Brouillon"
+    },
+    "dbStatus": {
+      "draft": "Brouillon",
+      "scheduled": "Programmé",
+      "live": "En direct",
+      "completed": "Terminé",
+      "cancelled": "Annulé"
+    },
+    "form": {
+      "newTitle": "Créer un nouvel événement",
+      "newSubtitle": "Ajoutez un atelier, une masterclass ou une soirée de louange au calendrier public.",
+      "editTitle": "Modifier l'événement",
+      "editSubtitle": "Mettez à jour les détails ci-dessous et enregistrez.",
+      "fields": {
+        "title": "Titre",
+        "description": "Description",
+        "audience": "Public cible",
+        "date": "Date",
+        "time": "Heure",
+        "venue": "Lieu",
+        "capacity": "Capacité",
+        "fee": "Frais (GHS)",
+        "isOnline": "Événement en ligne",
+        "isOnlineHint": "Activez si l'événement a lieu entièrement en ligne.",
+        "status": "Statut"
+      },
+      "placeholders": {
+        "title": "ex. Masterclass des chefs de louange",
+        "description": "De quoi parle cet événement ? Qui devrait y participer ?",
+        "audience": "ex. Chefs de louange et équipes",
+        "venue": "ex. Adullam Cave HQ, Accra",
+        "capacity": "Laissez vide pour illimité"
+      },
+      "submitCreate": "Créer l'événement",
+      "submitUpdate": "Enregistrer",
+      "submitting": "Enregistrement…",
+      "cancel": "Annuler",
+      "successCreate": "Événement créé.",
+      "successUpdate": "Événement mis à jour.",
+      "error": "Impossible d'enregistrer. Veuillez vérifier le formulaire et réessayer."
+    },
+    "detail": {
+      "title": "Détails de l'événement",
+      "back": "Retour aux événements",
+      "applicants": {
+        "title": "Inscrits",
+        "subtitle": "Toutes les personnes inscrites à cet événement.",
+        "name": "Nom",
+        "organization": "Organisation",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "status": "Statut",
+        "submitted": "Soumis le",
+        "empty": "Aucun inscrit pour l'instant."
+      },
+      "applicantStatus": {
+        "pending": "En attente",
+        "confirmed": "Confirmé",
+        "attended": "Présent",
+        "cancelled": "Annulé",
+        "declined": "Refusé"
+      },
+      "cancelEvent": {
+        "trigger": "Annuler l'événement",
+        "title": "Annuler cet événement ?",
+        "description": "Le statut de l'événement passera à Annulé. Les inscrits ne le verront plus sur le site public.",
+        "confirm": "Oui, annuler",
+        "abort": "Conserver l'événement"
+      },
+      "loadError": "Impossible de charger cet événement.",
+      "notFound": "Événement introuvable."
+    }
+  },
+  "adminGallery": {
+    "list": {
+      "title": "Galerie",
+      "subtitle": "Gérez chaque photo et vidéo affichée sur le site.",
+      "uploadCta": "Téléverser",
+      "empty": "Aucun média pour l'instant. Téléversez le premier pour commencer.",
+      "errors": {
+        "load": "Impossible de charger la galerie. Veuillez actualiser.",
+        "bulk": "Certains éléments n'ont pas pu être mis à jour. Veuillez réessayer.",
+        "delete": "Certains éléments n'ont pas pu être supprimés. Veuillez réessayer."
+      },
+      "search": {
+        "placeholder": "Rechercher par titre…",
+        "label": "Rechercher dans la galerie"
+      },
+      "categories": {
+        "all": "Tous",
+        "programs": "Programmes",
+        "installations": "Installations",
+        "events": "Événements"
+      },
+      "labels": {
+        "published": "Publié",
+        "draft": "Brouillon",
+        "featured": "À la une",
+        "video": "Vidéo",
+        "image": "Image"
+      },
+      "bulk": {
+        "selected": "{count, plural, one {# élément sélectionné} other {# éléments sélectionnés}}",
+        "publish": "Publier",
+        "unpublish": "Dépublier",
+        "delete": "Supprimer",
+        "clear": "Effacer la sélection",
+        "selectAll": "Tout sélectionner",
+        "publishedCount": "{count} {count, plural, one {élément mis à jour} other {éléments mis à jour}}.",
+        "deletedCount": "{count} {count, plural, one {élément supprimé} other {éléments supprimés}}.",
+        "confirmDeleteTitle": "Supprimer les éléments sélectionnés ?",
+        "confirmDeleteBody": "Cela supprimera définitivement {count} {count, plural, one {élément} other {éléments}} de la galerie. Cette action est irréversible.",
+        "confirmDelete": "Oui, supprimer",
+        "abort": "Annuler"
+      },
+      "card": {
+        "selectLabel": "Sélectionner {title}",
+        "editLabel": "Modifier {title}"
+      }
+    },
+    "categoryLabel": {
+      "performances": "Performances",
+      "rehearsals": "Répétitions",
+      "workshops": "Ateliers",
+      "equipment": "Équipement",
+      "events": "Événements",
+      "community": "Communauté"
+    },
+    "upload": {
+      "title": "Téléverser un média",
+      "subtitle": "Ajoutez une photo, une vidéo téléversée ou un lien externe à la galerie.",
+      "back": "Retour à la galerie",
+      "sourceLabel": "Source du média",
+      "sources": {
+        "image": "Téléverser une photo",
+        "embed": "Lien YouTube ou Vimeo"
+      },
+      "dropzone": {
+        "idle": "Glissez une photo ici ou cliquez pour en choisir une.",
+        "active": "Déposez la photo pour la joindre.",
+        "hint": "PNG, JPG ou WEBP jusqu'à 10 Mo.",
+        "selected": "Sélectionné : {name}",
+        "replace": "Remplacer",
+        "uploading": "Téléversement…"
+      },
+      "embed": {
+        "label": "URL de la vidéo",
+        "placeholder": "https://youtube.com/watch?v=… ou https://vimeo.com/…",
+        "hint": "Collez un lien YouTube ou Vimeo. Le type est détecté automatiquement.",
+        "preview": "Aperçu",
+        "invalid": "Lien non reconnu. Utilisez une URL YouTube ou Vimeo."
+      },
+      "fields": {
+        "title": "Titre",
+        "description": "Description",
+        "category": "Catégorie",
+        "dateTaken": "Date de prise",
+        "isFeatured": "À la une",
+        "isFeaturedHint": "Les éléments à la une apparaissent sur la page d'accueil.",
+        "isPublished": "Publié",
+        "isPublishedHint": "Dépublier masque l'élément du site public."
+      },
+      "placeholders": {
+        "title": "ex. Répétition du dimanche",
+        "description": "Que se passe-t-il sur cette photo ou vidéo ?"
+      },
+      "submit": "Enregistrer",
+      "submitting": "Enregistrement…",
+      "cancel": "Annuler",
+      "success": "Élément ajouté à la galerie.",
+      "errors": {
+        "noMedia": "Joignez une photo ou collez un lien YouTube/Vimeo.",
+        "invalidFileType": "Format non pris en charge. Utilisez PNG, JPG ou WEBP.",
+        "tooLarge": "Fichier trop volumineux. Maximum 10 Mo.",
+        "uploadFailed": "Échec du téléversement. Veuillez réessayer.",
+        "saveFailed": "Impossible d'enregistrer l'élément. Veuillez réessayer."
+      }
+    },
+    "edit": {
+      "title": "Modifier l'élément",
+      "fields": {
+        "title": "Titre",
+        "description": "Description",
+        "category": "Catégorie",
+        "isFeatured": "À la une",
+        "isPublished": "Publié"
+      },
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "saved": "Élément mis à jour.",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "deleting": "Suppression…",
+      "deleted": "Élément supprimé.",
+      "deleteConfirm": {
+        "title": "Supprimer cet élément ?",
+        "description": "Cela supprimera définitivement l'élément. Cette action est irréversible.",
+        "confirm": "Oui, supprimer",
+        "abort": "Conserver"
+      },
+      "errors": {
+        "save": "Impossible d'enregistrer. Veuillez réessayer.",
+        "delete": "Impossible de supprimer. Veuillez réessayer."
+      }
+    }
+  },
+  "adminBlog": {
+    "list": {
+      "title": "Blog",
+      "subtitle": "Rédigez, modifiez et publiez des articles pour le site public.",
+      "createCta": "Nouvel article",
+      "empty": "Aucun article pour le moment. Rédigez le premier pour commencer.",
+      "table": {
+        "title": "Titre",
+        "status": "Statut",
+        "publishedDate": "Publié le",
+        "actions": "Actions"
+      },
+      "status": {
+        "published": "Publié",
+        "draft": "Brouillon"
+      },
+      "actions": {
+        "edit": "Modifier",
+        "publish": "Publier",
+        "unpublish": "Dépublier"
+      },
+      "publishedAt": "Non publié",
+      "search": {
+        "label": "Rechercher des articles",
+        "placeholder": "Rechercher par titre ou slug…"
+      },
+      "errors": {
+        "load": "Impossible de charger les articles. Veuillez actualiser.",
+        "toggle": "Impossible de mettre à jour l'article. Veuillez réessayer."
+      },
+      "toggleSuccess": {
+        "published": "Article publié.",
+        "unpublished": "Article dépublié."
+      }
+    },
+    "form": {
+      "newTitle": "Nouvel article",
+      "newSubtitle": "Composez un nouvel article. Vous pouvez l'enregistrer en brouillon et publier plus tard.",
+      "editTitle": "Modifier l'article",
+      "editSubtitle": "Mettez à jour l'article ci-dessous et enregistrez.",
+      "back": "Retour au blog",
+      "fields": {
+        "title": "Titre",
+        "slug": "Slug URL",
+        "slugHint": "Généré automatiquement à partir du titre. Vous pouvez le modifier.",
+        "excerpt": "Extrait",
+        "excerptHint": "Un court résumé affiché dans les listes (optionnel).",
+        "content": "Contenu",
+        "coverImage": "Image de couverture",
+        "isPublished": "Publié",
+        "isPublishedHint": "Activez pour rendre l'article visible sur le site public."
+      },
+      "placeholders": {
+        "title": "ex. Coulisses de notre dernière soirée de louange",
+        "slug": "coulisses",
+        "excerpt": "Donnez aux lecteurs un teaser d'une ligne…",
+        "content": "Écrivez votre article ici…"
+      },
+      "cover": {
+        "idle": "Cliquez pour téléverser une image de couverture",
+        "active": "Déposez l'image pour l'attacher",
+        "hint": "PNG, JPG ou WEBP jusqu'à 10 Mo.",
+        "replace": "Remplacer",
+        "remove": "Retirer",
+        "uploading": "Téléversement…"
+      },
+      "submitCreate": "Créer l'article",
+      "submitUpdate": "Enregistrer",
+      "submitting": "Enregistrement…",
+      "cancel": "Annuler",
+      "successCreate": "Article créé.",
+      "successUpdate": "Article mis à jour.",
+      "error": "Impossible d'enregistrer. Vérifiez le formulaire et réessayez.",
+      "uploadError": "Impossible de téléverser l'image. Veuillez réessayer."
+    },
+    "detail": {
+      "loadError": "Impossible de charger cet article.",
+      "notFound": "Article introuvable.",
+      "delete": {
+        "trigger": "Supprimer l'article",
+        "title": "Supprimer cet article ?",
+        "description": "Cela supprimera définitivement l'article. Cette action est irréversible.",
+        "confirm": "Oui, supprimer",
+        "abort": "Conserver",
+        "success": "Article supprimé.",
+        "error": "Impossible de supprimer. Veuillez réessayer."
+      }
+    }
+  },
+  "adminEquipment": {
+    "list": {
+      "title": "Registres d'équipement",
+      "subtitle": "Suivez chaque installation et intervention dans les églises et institutions.",
+      "createCta": "Nouveau registre",
+      "empty": "Aucun registre pour l'instant. Enregistrez votre première installation.",
+      "table": {
+        "church": "Église",
+        "location": "Lieu",
+        "serviceDate": "Date d'intervention",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "actions": {
+        "edit": "Modifier"
+      },
+      "search": {
+        "label": "Rechercher des registres",
+        "placeholder": "Rechercher par église ou lieu…"
+      },
+      "errors": {
+        "load": "Impossible de charger les registres. Veuillez actualiser."
+      }
+    },
+    "status": {
+      "planned": "Planifié",
+      "in_progress": "En cours",
+      "completed": "Terminé",
+      "maintenance": "Maintenance"
+    },
+    "form": {
+      "newTitle": "Nouveau registre d'équipement",
+      "newSubtitle": "Enregistrez une nouvelle installation ou intervention.",
+      "editTitle": "Modifier le registre",
+      "editSubtitle": "Mettez à jour les détails et les liens galerie.",
+      "back": "Retour aux registres",
+      "fields": {
+        "churchName": "Église / Institution",
+        "location": "Lieu",
+        "serviceDate": "Date d'intervention",
+        "equipmentTypes": "Types d'équipement",
+        "equipmentTypesHint": "Sélectionnez tout ce qui a été installé ou entretenu.",
+        "notes": "Notes internes",
+        "notesHint": "Notes pour l'équipe (non visibles publiquement).",
+        "status": "Statut",
+        "gallery": "Éléments galerie liés",
+        "galleryHint": "Choisissez des photos de la galerie qui documentent cette installation."
+      },
+      "placeholders": {
+        "churchName": "ex. Cathédrale Adullam",
+        "location": "ex. East Legon, Accra",
+        "notes": "Ce que l'équipe doit retenir sur cette installation…"
+      },
+      "equipmentTypes": {
+        "speakers": "Haut-parleurs",
+        "microphones": "Microphones",
+        "mixers": "Tables de mixage",
+        "amplifiers": "Amplificateurs",
+        "monitors": "Retours de scène",
+        "instruments": "Instruments",
+        "lighting": "Éclairage",
+        "cabling": "Câblage",
+        "acoustic": "Traitement acoustique",
+        "projectors": "Projecteurs / Écrans",
+        "other": "Autre"
+      },
+      "gallery": {
+        "empty": "Aucun élément galerie pour l'instant. Téléversez d'abord des médias dans la galerie.",
+        "search": "Rechercher dans la galerie…",
+        "selected": "{count, plural, =0 {Aucun élément sélectionné} one {# élément lié} other {# éléments liés}}"
+      },
+      "submitCreate": "Créer le registre",
+      "submitUpdate": "Enregistrer",
+      "submitting": "Enregistrement…",
+      "cancel": "Annuler",
+      "successCreate": "Registre créé.",
+      "successUpdate": "Registre mis à jour.",
+      "error": "Impossible d'enregistrer. Vérifiez le formulaire et réessayez."
+    },
+    "detail": {
+      "loadError": "Impossible de charger ce registre.",
+      "notFound": "Registre introuvable.",
+      "linkedGallery": {
+        "title": "Galerie liée",
+        "subtitle": "Photos de la galerie liées à cette installation.",
+        "empty": "Aucun élément galerie lié."
+      }
+    }
   }
 }
