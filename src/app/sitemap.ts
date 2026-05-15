@@ -67,7 +67,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (!post.slug) continue;
       entries.push({
         url: localizedUrl(`/blog/${post.slug}`, locale),
-        lastModified: post.updated_at ? new Date(post.updated_at) : now,
+        lastModified: post.published_at
+          ? new Date(post.published_at)
+          : new Date(post.created_at),
         changeFrequency: 'weekly',
         priority: 0.7,
       });
