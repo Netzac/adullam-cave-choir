@@ -16,7 +16,7 @@ export function RootLayout({ children, locale }: RootLayoutProps) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="dark"
       enableSystem
       disableTransitionOnChange
     >
