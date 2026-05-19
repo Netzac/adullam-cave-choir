@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { ArrowRight, Speaker, Piano, Mic, Radio } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
@@ -20,6 +21,24 @@ const labels: Record<string, string> = {
   mic: 'Mics & Monitors',
   radio: 'Live Streaming',
 };
+
+const showcase: { src: string; title: string; caption: string }[] = [
+  {
+    src: '/images/equipment/sound-system.jpg',
+    title: 'Sound Systems',
+    caption: 'Sanctuary-grade PA installs',
+  },
+  {
+    src: '/images/equipment/piano.jpg',
+    title: 'Piano & Keys',
+    caption: 'Stage keyboards and grand pianos',
+  },
+  {
+    src: '/images/equipment/installation.jpg',
+    title: 'On-site Installation',
+    caption: 'Configuration and team training',
+  },
+];
 
 export function EquipmentPreview() {
   const t = useTranslations('home.equipment');
@@ -43,7 +62,33 @@ export function EquipmentPreview() {
           invert
         />
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {showcase.map((item, i) => (
+            <motion.figure
+              key={item.src}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.55, delay: i * 0.08 }}
+              className="group relative h-72 overflow-hidden rounded-2xl border border-white/10"
+            >
+              <Image
+                src={item.src}
+                alt={item.title}
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-5">
+                <h3 className="font-serif text-lg font-bold text-white">{item.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{item.caption}</p>
+              </figcaption>
+            </motion.figure>
+          ))}
+        </div>
+
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => (
             <motion.div
               key={s.key}

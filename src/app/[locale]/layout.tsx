@@ -59,6 +59,10 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export function generateStaticParams() {

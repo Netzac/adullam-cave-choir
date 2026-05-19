@@ -39,7 +39,7 @@ export function Logo({ className, variant = 'light', showTagline = false }: Logo
           )}
         >
           <Image
-            src="/images/logo.png"
+            src="/images/logo.jpg"
             alt=""
             fill
             sizes="36px"

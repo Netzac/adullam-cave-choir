@@ -32,10 +32,10 @@ export function PageHero({
     >
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-50"
+        className="pointer-events-none absolute inset-0 opacity-80"
         style={{
           backgroundImage: isDark
-            ? 'radial-gradient(circle at 20% 20%, rgba(107,33,168,0.35), transparent 50%), radial-gradient(circle at 80% 80%, rgba(217,119,6,0.25), transparent 55%)'
+            ? 'radial-gradient(circle at 20% 20%, rgba(107,33,168,0.55), transparent 35%), radial-gradient(circle at 80% 80%, rgba(217,119,6,0.40), transparent 35%)'
             : 'radial-gradient(circle at 80% 0%, rgba(107,33,168,0.10), transparent 50%)',
         }}
         initial={{ opacity: 0 }}
