@@ -25,7 +25,7 @@ import { z } from 'zod';
 import { applicationSchema, type ApplicationInput } from '@/lib/validations/applicationSchema';
 
 type ApplicationFormInput = z.input<typeof applicationSchema>;
-import { placeholderPrograms } from '@/lib/constants/placeholders';
+import type { Program } from '@/types/database';
 import { cn } from '@/lib/utils';
 
 type Step = 0 | 1 | 2;
@@ -36,7 +36,7 @@ const stepFields: Record<Step, (keyof ApplicationInput)[]> = {
   2: ['guardian_consent', 'notes'],
 };
 
-export function ApplyView() {
+export function ApplyView({ programs }: { programs: Program[] }) {
   const locale = useLocale();
   const hero = useTranslations('apply.hero');
   const nav = useTranslations('nav');
@@ -277,7 +277,7 @@ export function ApplyView() {
                           <SelectValue placeholder="Choose a program" />
                         </SelectTrigger>
                         <SelectContent>
-                          {placeholderPrograms.map((p) => (
+                          {programs.map((p) => (
                             <SelectItem key={p.id} value={p.title}>
                               {p.title}
                             </SelectItem>

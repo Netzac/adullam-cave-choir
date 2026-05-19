@@ -14,7 +14,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { PageHero } from '@/components/sections/PageHero';
-import { placeholderPrograms } from '@/lib/constants/placeholders';
 import { cn } from '@/lib/utils';
 import type { Program } from '@/types/database';
 
@@ -30,13 +29,14 @@ const matchFilter = (p: Program, key: FilterKey) => {
   return true;
 };
 
-export function ProgramsView() {
+export function ProgramsView({ programs }: { programs: Program[] }) {
   const hero = useTranslations('programsPage.hero');
   const nav = useTranslations('nav');
   const filters = useTranslations('programsPage.filters');
   const card = useTranslations('programsPage.card');
   const faq = useTranslations('programsPage.faq');
   const cta = useTranslations('cta');
+  const common = useTranslations('common');
 
   const [filter, setFilter] = React.useState<FilterKey>('all');
 
@@ -47,7 +47,7 @@ export function ProgramsView() {
     { key: 'instruments', label: filters('instruments') },
   ];
 
-  const visible = placeholderPrograms.filter((p) => matchFilter(p, filter));
+  const visible = programs.filter((p) => matchFilter(p, filter));
 
   return (
     <>
@@ -79,6 +79,12 @@ export function ProgramsView() {
             </button>
           ))}
         </div>
+
+        {visible.length === 0 ? (
+          <p className="mt-10 rounded-2xl border border-dashed border-border/70 p-10 text-center text-muted-foreground">
+            {common('empty')}
+          </p>
+        ) : null}
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">

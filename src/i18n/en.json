@@ -75,7 +75,19 @@
     "addressLabel": "Address",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
-    "followUs": "Follow us"
+    "followUs": "Follow us",
+    "address": "Accra, Ghana",
+    "email": "hello@adullamcave.org",
+    "phone": "+233 XX XXX XXXX",
+    "whatsapp": "+233 XX XXX XXXX",
+    "social": {
+      "facebook": "https://facebook.com/adullamcavechoir",
+      "instagram": "https://instagram.com/adullamcavechoir",
+      "youtube": "https://youtube.com/@adullamcavechoir",
+      "tiktok": "https://tiktok.com/@adullamcavechoir",
+      "x": "https://x.com/adullamcave",
+      "handle": "@adullamcavechoir"
+    }
   },
   "home": {
     "hero": {
@@ -404,6 +416,18 @@
     },
     "cta": "Begin your application"
   },
+  "blogPage": {
+    "hero": {
+      "eyebrow": "Journal",
+      "title": "From the blog",
+      "subtitle": "Reflections, lessons, and news from the cave."
+    },
+    "empty": "No posts yet — come back soon.",
+    "readMore": "Read article",
+    "backToList": "Back to all posts",
+    "notFound": "We couldn't find that post.",
+    "publishedOn": "Published {date}"
+  },
   "donate": {
     "hero": {
       "eyebrow": "Support",
@@ -418,17 +442,17 @@
       "title": "Choose how to give",
       "chorister": {
         "title": "Sponsor a Chorister",
-        "amount": 250,
+        "amount": "250",
         "body": "Cover training, materials, and care for one young chorister for a season."
       },
       "church": {
         "title": "Equip a Church",
-        "amount": 1500,
+        "amount": "1500",
         "body": "Contribute toward audio gear and installation for a church in need."
       },
       "general": {
         "title": "General Support",
-        "amount": 100,
+        "amount": "100",
         "body": "Strengthen the work wherever it's most needed."
       }
     },

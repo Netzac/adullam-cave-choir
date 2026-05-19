@@ -11,6 +11,10 @@ import { DonationCTA } from '@/components/sections/DonationCTA';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { BlogPreview } from '@/components/sections/BlogPreview';
 import { ContactStrip } from '@/components/sections/ContactStrip';
+import { createClient } from '@/lib/supabase/server';
+import * as eventQueries from '@/lib/supabase/queries/events';
+import * as galleryQueries from '@/lib/supabase/queries/gallery';
+import * as blogQueries from '@/lib/supabase/queries/blog';
 import {
   placeholderEvents,
   placeholderGallery,
@@ -18,6 +22,7 @@ import {
 } from '@/lib/constants/placeholders';
 import { siteConfig } from '@/config/site';
 import { OrganizationJsonLd } from '@/components/seo/OrganizationJsonLd';
+import type { BlogPost, ChoirEvent, GalleryItem } from '@/types/database';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('home.hero');
@@ -34,7 +39,43 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function HomePage() {
+type HomeData = {
+  events: ChoirEvent[];
+  gallery: GalleryItem[];
+  posts: BlogPost[];
+};
+
+async function loadHomeData(): Promise<HomeData> {
+  const fallback: HomeData = {
+    events: placeholderEvents,
+    gallery: placeholderGallery,
+    posts: placeholderBlog,
+  };
+
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return fallback;
+  }
+
+  try {
+    const supabase = createClient();
+    const [events, gallery, posts] = await Promise.all([
+      eventQueries.getUpcoming(supabase, 6),
+      galleryQueries.getFeatured(supabase, 9),
+      blogQueries.getPublished(supabase, 3),
+    ]);
+    return {
+      events: events.length > 0 ? events : fallback.events,
+      gallery: gallery.length > 0 ? gallery : fallback.gallery,
+      posts: posts.length > 0 ? posts : fallback.posts,
+    };
+  } catch {
+    return fallback;
+  }
+}
+
+export default async function HomePage() {
+  const { events, gallery, posts } = await loadHomeData();
+
   return (
     <>
       <OrganizationJsonLd />
@@ -42,12 +83,12 @@ export default function HomePage() {
       <MissionStrip />
       <AboutPreview />
       <ProgramsPreview />
-      <UpcomingEvents events={placeholderEvents} />
-      <GalleryPreview items={placeholderGallery} />
+      <UpcomingEvents events={events} />
+      <GalleryPreview items={gallery} />
       <EquipmentPreview />
       <DonationCTA />
       <TestimonialsSection />
-      <BlogPreview posts={placeholderBlog} />
+      <BlogPreview posts={posts} />
       <ContactStrip />
     </>
   );

@@ -75,7 +75,19 @@
     "addressLabel": "Adresse",
     "emailLabel": "E-mail",
     "phoneLabel": "Téléphone",
-    "followUs": "Suivez-nous"
+    "followUs": "Suivez-nous",
+    "address": "Accra, Ghana",
+    "email": "hello@adullamcave.org",
+    "phone": "+233 XX XXX XXXX",
+    "whatsapp": "+233 XX XXX XXXX",
+    "social": {
+      "facebook": "https://facebook.com/adullamcavechoir",
+      "instagram": "https://instagram.com/adullamcavechoir",
+      "youtube": "https://youtube.com/@adullamcavechoir",
+      "tiktok": "https://tiktok.com/@adullamcavechoir",
+      "x": "https://x.com/adullamcave",
+      "handle": "@adullamcavechoir"
+    }
   },
   "home": {
     "hero": {
@@ -150,16 +162,17 @@
     "vmv": {
       "title": "Vision, Mission & Valeurs",
       "visionTitle": "Vision",
-      "visionBody": "Susciter une génération d'adorateurs dont la vie et le son pointent vers le Roi.",
+      "visionBody": "Susciter une génération prophétique d'adorateurs sortis des « cavernes » de la vie — des hommes et des femmes qui ont connu la détresse, la dette et le mécontentement, mais qui sont aujourd'hui établis comme capitaines du son. Une chorale qui change les atmosphères, guérit les nations et prépare le chemin du Roi, à l'image des hommes de David passés de la caverne au royaume.",
       "missionTitle": "Mission",
-      "missionBody": "Former, encadrer et équiper choristes, chefs de louange et églises avec excellence et intégrité.",
+      "missionBody": "Rassembler les affligés, les brisés et les oubliés en une communauté d'adorateurs, transformant la douleur en louange et les marginaux en ménestrels pour la gloire de Dieu. Nous existons pour être un refuge où les voix sont restaurées et les destinées réalignées par le son, la présence et la communauté.",
       "valuesTitle": "Valeurs",
       "valuesBody": "Révérence. Discipline. Excellence. Service. Mentorat."
     },
     "philosophy": {
       "title": "Notre philosophie de formation",
-      "p1": "La grande louange déborde de la dévotion cachée. Nous enseignons l'art et le cœur ensemble.",
-      "p2": "Chaque programme repose sur trois rails : compétence, mentorat, service de l'église locale."
+      "p1": "La caverne n'est pas la fin : chaque saison de caverne est une matrice pour la grandeur. La détresse est la matière première de la profondeur. Dieu recrute dans les cavernes et révèle dans les palais.",
+      "p2": "Le son précède la structure : avant d'être roi, David était psalmiste. Nous privilégions l'adoration authentique à la performance. Notre son naît des cicatrices, pas seulement de la compétence.",
+      "p3": "Le Capitaine sur nous : Christ est notre David — notre Capitaine. Nous nous rassemblons à Lui, pas à une plateforme. Il transforme nos plaintes en chœur et notre chaos en chorégraphie."
     },
     "equipment": {
       "title": "Nous équipons aussi les églises",
@@ -403,6 +416,18 @@
     },
     "cta": "Commencer ma candidature"
   },
+  "blogPage": {
+    "hero": {
+      "eyebrow": "Journal",
+      "title": "Sur le blog",
+      "subtitle": "Réflexions, leçons et actualités de la caverne."
+    },
+    "empty": "Aucun article pour l'instant — revenez bientôt.",
+    "readMore": "Lire l'article",
+    "backToList": "Retour aux articles",
+    "notFound": "Article introuvable.",
+    "publishedOn": "Publié le {date}"
+  },
   "donate": {
     "hero": {
       "eyebrow": "Soutien",
@@ -417,17 +442,17 @@
       "title": "Choisissez votre don",
       "chorister": {
         "title": "Parrainer un choriste",
-        "amount": 250,
-        "body": "Couvrez la formation d'un jeune choriste pour une saison."
+        "amount": "250",
+        "body": "Couvrez la formation, le matériel et l'accompagnement d'un jeune choriste pour une saison."
       },
       "church": {
         "title": "Équiper une église",
-        "amount": 1500,
-        "body": "Contribuez à l'audio d'une église dans le besoin."
+        "amount": "1500",
+        "body": "Contribuez au matériel audio et à l'installation pour une église dans le besoin."
       },
       "general": {
         "title": "Soutien général",
-        "amount": 100,
+        "amount": "100",
         "body": "Renforcez l'œuvre là où c'est le plus nécessaire."
       }
     },
@@ -450,9 +475,9 @@
     }
   },
   "stats": {
-    "years": 7,
-    "choristers": 240,
-    "churches": 35
+    "years": "7",
+    "choristers": "240",
+    "churches": "35"
   },
   "testimonials": [
     {

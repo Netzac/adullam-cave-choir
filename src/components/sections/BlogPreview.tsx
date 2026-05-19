@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations, useFormatter } from 'next-intl';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ImageIcon } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { SectionHeader } from './SectionHeader';
@@ -55,7 +55,14 @@ export function BlogPreview({ posts }: { posts: BlogPost[] }) {
                     sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                ) : null}
+                ) : (
+                  <div
+                    aria-hidden
+                    className="flex h-full w-full items-center justify-center bg-gradient-to-br from-purple-900/10 via-muted to-gold-500/10 text-muted-foreground"
+                  >
+                    <ImageIcon className="h-10 w-10 opacity-60" />
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 {post.published_at ? (

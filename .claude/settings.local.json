@@ -12,7 +12,11 @@
       "Bash(npx next *)",
       "Bash(git add *)",
       "Bash(git rm *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(grep -E \"\\\\.ts$\")",
+      "Bash(xargs grep -l \"cover_image_url\\\\|passport_photo_url\\\\|file_url\\\\|thumbnail_url\")",
+      "Bash(echo \"EXIT_CODE=$?\")",
+      "Read(//tmp/**)"
     ]
   }
 }

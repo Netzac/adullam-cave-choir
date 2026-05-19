@@ -52,12 +52,24 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
     [items],
   );
 
-  const slides = photos.map((p) => ({
-    src: p.file_url ?? p.thumbnail_url ?? '',
-    alt: p.title ?? 'Gallery image',
-    title: p.title ?? undefined,
-    description: p.description ?? undefined,
-  }));
+  type Slide = {
+    src: string;
+    alt: string;
+    title: string;
+    description: string | undefined;
+  };
+  const slides: Slide[] = photos.flatMap((p) => {
+    const src = p.file_url ?? p.thumbnail_url ?? null;
+    if (!src) return [];
+    return [
+      {
+        src,
+        alt: p.title ?? 'Gallery image',
+        title: p.title ?? '',
+        description: p.description ?? undefined,
+      },
+    ];
+  });
 
   React.useEffect(() => setVisible(PAGE_SIZE), [filter]);
 
@@ -171,7 +183,7 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
                 return (
                   <motion.a
                     key={v.id}
-                    href={v.youtube_url ?? '#'}
+                    href={v.youtube_url ?? `https://www.youtube.com/watch?v=${id}`}
                     target="_blank"
                     rel="noreferrer noopener"
                     initial={{ opacity: 0, y: 20 }}

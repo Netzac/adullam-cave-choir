@@ -163,6 +163,12 @@ export function EventsView({
           </h2>
           <p className="mt-2 text-center text-muted-foreground">{pastT('subtitle')}</p>
 
+          {past.length === 0 ? (
+            <p className="mt-10 rounded-2xl border border-dashed border-border/70 p-8 text-center text-muted-foreground">
+              {t('empty')}
+            </p>
+          ) : null}
+
           <Accordion type="single" collapsible className="mt-10 w-full">
             {past.map((evt) => {
               const d = new Date(`${evt.date}T${evt.time}`);

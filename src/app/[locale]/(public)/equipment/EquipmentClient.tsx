@@ -39,6 +39,7 @@ export function EquipmentClient({ cases }: { cases: EquipmentRecord[] }) {
   const casesT = useTranslations('equipmentPage.cases');
   const ctaSec = useTranslations('equipmentPage.cta');
   const cta = useTranslations('cta');
+  const common = useTranslations('common');
   const format = useFormatter();
 
   return (
@@ -121,6 +122,12 @@ export function EquipmentClient({ cases }: { cases: EquipmentRecord[] }) {
           </h2>
           <p className="mt-3 text-muted-foreground">{casesT('subtitle')}</p>
         </div>
+
+        {cases.length === 0 ? (
+          <p className="mt-12 rounded-2xl border border-dashed border-border/70 p-10 text-center text-muted-foreground">
+            {common('empty')}
+          </p>
+        ) : null}
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {cases.map((c, i) => (
