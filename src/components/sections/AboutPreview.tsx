@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 
@@ -47,18 +48,18 @@ export function AboutPreview() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative"
         >
-          <div className="aspect-[4/5] overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-purple-900 via-purple-800 to-dark shadow-elevated">
-            <div className="relative flex h-full w-full items-center justify-center">
-              <div
-                aria-hidden
-                className="absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(circle at 30% 30%, rgba(217,119,6,0.5), transparent 50%)',
-                }}
-              />
-              <Sparkles className="h-24 w-24 text-gold-400/70" />
-            </div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-purple-900 via-purple-800 to-dark shadow-elevated">
+            <Image
+              src="/images/about.jpg"
+              alt="Adullam Cave Choir"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-tr from-purple-950/40 via-transparent to-gold-500/10"
+            />
           </div>
           <div
             aria-hidden

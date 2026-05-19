@@ -150,16 +150,17 @@
     "vmv": {
       "title": "Vision, Mission & Values",
       "visionTitle": "Vision",
-      "visionBody": "To raise a generation of worshippers whose lives and sound point to the King.",
+      "visionBody": "To raise a prophetic generation of worshipers from the “caves” of life — people who have known distress, debt, and discontent, but are now commissioned as captains of sound. A choir that shifts atmospheres, heals nations, and prepares the way for the King, just as David’s men moved from the cave to the kingdom.",
       "missionTitle": "Mission",
-      "missionBody": "We train, mentor, and equip choristers, worship leaders, and churches with excellence and integrity.",
+      "missionBody": "To gather the distressed, the broken, and the overlooked into a company of worshipers, transforming pain into praise and misfits into minstrels for God’s glory. We exist to be a refuge where voices are restored and destinies are realigned through sound, presence, and community.",
       "valuesTitle": "Values",
       "valuesBody": "Reverence. Discipline. Excellence. Servanthood. Mentorship."
     },
     "philosophy": {
       "title": "Our training philosophy",
-      "p1": "We believe great worship is the overflow of hidden devotion. So we teach craft and character together — vocal technique alongside heart posture, musicianship alongside ministry.",
-      "p2": "Every program runs on three rails: foundational skill, intentional mentorship, and serving the local church."
+      "p1": "The Cave is Not the End: We believe every cave season is a womb for greatness. Distress is raw material for depth. God recruits in caves and reveals in palaces",
+      "p2": "Sound Precedes Structure: Before David was king, he was a psalmist. We prioritize authentic worship over performance. Our sound is born from scars, not just skill.",
+      "p3":"Captain Over Us: Christ is our David — our Captain. We gather to Him, not to a platform. He transforms our complaints into chorus and our chaos into choreography."
     },
     "equipment": {
       "title": "We also equip churches",
@@ -450,9 +451,9 @@
     }
   },
   "stats": {
-    "years": 7,
-    "choristers": 240,
-    "churches": 35
+    "years": "7",
+    "choristers": "240",
+    "churches": "35"
   },
   "testimonials": [
     {

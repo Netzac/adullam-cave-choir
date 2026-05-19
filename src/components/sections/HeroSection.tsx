@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Music2, ChevronDown, PlayCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -32,9 +33,19 @@ export function HeroSection() {
 
   return (
     <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-dark text-white">
+      <div aria-hidden className="absolute inset-0 -z-30">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 bg-gradient-to-br from-dark via-purple-950 to-purple-900"
+        className="absolute inset-0 -z-20 bg-gradient-to-br from-dark/90 via-purple-950/85 to-purple-900/80"
       />
       <div
         aria-hidden
