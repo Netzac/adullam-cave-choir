@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Adullam Cave Choir",
-    "tagline": "from the Cave to the Stage"
+    "tagline": " Adullam Cave Choir: Gathered by grace. Trained in the cave. Released for the Kingdom."
   },
   "nav": {
     "home": "Home",
@@ -156,8 +156,10 @@
     },
     "story": {
       "title": "Our story",
-      "p1": "Long before the lights and the live streams, there was a cave — a place of consecration where voices were forged, calluses formed, and a sound was born.",
-      "p2": "What began as a handful of young singers in Accra has grown into a movement training choristers and equipping churches across Ghana and beyond."
+      "p1" :"1 Samuel 22:2 ",
+      "p2": "And every one that was in distress, and every one that was in debt, and every one that was discontented, gathered themselves unto him; and he became a captain over them: and there were with him about four hundred men. This verse is the heartbeat of David’s cave season — misfits turned warriors, broken people becoming a band of brothers under God. So here’s a framework for Adullam Cave Choir:",
+      "p3": "Long before the lights and the live streams, there was a cave — a place of consecration where voices were forged, calluses formed, and a sound was born.",
+      "p4": "What began as a handful of young singers in Accra has grown into a movement training choristers and equipping churches across Ghana and beyond."
     },
     "vmv": {
       "title": "Vision, Mission & Values",
@@ -166,13 +168,16 @@
       "missionTitle": "Mission",
       "missionBody": "To gather the distressed, the broken, and the overlooked into a company of worshipers, transforming pain into praise and misfits into minstrels for God’s glory. We exist to be a refuge where voices are restored and destinies are realigned through sound, presence, and community.",
       "valuesTitle": "Values",
-      "valuesBody": "Reverence. Discipline. Excellence. Servanthood. Mentorship."
+      "valuesBody": "Refuge & Release: The Cave is first a hospital, then a training ground. We make room for healing, lament, and honest worship before we focus on excellence.\nBrotherhood in Battle: 400 men became David's mighty men. We're not soloists competing, we're a company covering. Unity is our sound before harmony is.\nProphetic Sound: Our songs are weapons. Like David's harp drove out torment from Saul, our worship confronts distress, cancels debt, and silences discontent.\nProcess Over Platform: Adullam came before the throne. We value hiddenness, character, and oil over applause. The cave anoints you for the crown.\nTestimony to Triumph: Every member carries a before the cave story. Our music tells of how God takes the indebted and makes them investors in His Kingdom."
+
     },
     "philosophy": {
       "title": "Our training philosophy",
-      "p1": "The Cave is Not the End: We believe every cave season is a womb for greatness. Distress is raw material for depth. God recruits in caves and reveals in palaces",
-      "p2": "Sound Precedes Structure: Before David was king, he was a psalmist. We prioritize authentic worship over performance. Our sound is born from scars, not just skill.",
-      "p3":"Captain Over Us: Christ is our David — our Captain. We gather to Him, not to a platform. He transforms our complaints into chorus and our chaos into choreography."
+      "p1": "1. The Cave is Not the End: We believe every cave season is a womb for greatness. Distress is raw material for depth. God recruits in caves and reveals in palaces",
+      "p2": "2. Sound Precedes Structure: Before David was king, he was a psalmist. We prioritize authentic worship over performance. Our sound is born from scars, not just skill.",
+      "p3":"3. Captain Over Us: Christ is our David — our Captain. We gather to Him, not to a platform. He transforms our complaints into chorus and our chaos into choreography.",
+      "p4": "4. From Outcasts to Army: No one is too broken to belong. The same grace that gathered debtors and malcontents to David gathers us. We don't audition for worthiness; we respond to grace."
+
     },
     "equipment": {
       "title": "We also equip churches",

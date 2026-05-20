@@ -83,7 +83,33 @@ function VMVBlock() {
                 <c.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-5 font-serif text-xl font-bold">{c.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
+              {c.body.includes('\n') ? (
+                  // <ul className="space-y-2 text-base">
+                  //   {c.body.split('\n').map((line, i) => {
+                  //     const [bold, ...rest] = line.split(':');
+                  //     return (
+                  //       <li key={i} className="flex gap-2">
+                  //         <span className="shrink-0 mt-0.5">--</span>
+                  //         <span>
+                  //           <strong className="font-semibold">{bold}:</strong>{' '}
+                  //           {rest.join(':')}
+                  //         </span>
+                  //       </li>
+                  //     );
+                  //   })}
+                  // </ul>
+                  <ul className="space-y-2 text-base">
+                      {c.body.split('\n').map((line, i) => (
+                        <li key={i} className="flex gap-2">
+                          <span className="shrink-0 mt-0.5">--</span>
+                          <span>{line}</span>
+                        </li>
+                      ))}
+                </ul>
+                ) : (
+                    <p className="mt-2 text-base leading-relaxed">{c.body}</p>
+                )}
+              
             </div>
           ))}
         </div>
