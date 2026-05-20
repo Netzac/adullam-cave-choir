@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-const PARTICLE_COUNT = 30;
+const PARTICLE_COUNT = 15;
 
 function useParticles() {
   return React.useMemo(
@@ -18,9 +18,9 @@ function useParticles() {
         id: i,
         left: Math.random() * 100,
         delay: Math.random() * 3,
-        duration: 10 + Math.random() * 8,
+        duration: 20 + Math.random() * 8,
         size: 30 + Math.random() * 20,
-        opacity: 0.45 + Math.random() * 0.18,
+        opacity: 0.10 + Math.random() * 0.18,
       })),
     []
   );
