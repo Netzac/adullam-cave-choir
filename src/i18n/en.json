@@ -465,7 +465,7 @@
       "amount": "Amount (GHS)",
       "customAmount": "Or enter a custom amount",
       "donorName": "Your name (optional)",
-      "email": "Email (optional)",
+      "email": "Email",
       "phone": "Phone (optional)",
       "message": "Leave a note (optional)",
       "submit": "Continue to payment",

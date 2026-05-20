@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export const donationSchema = z.object({
   donor_name: z.string().trim().max(120).optional().or(z.literal('')),
-  email: z.string().trim().email('Please enter a valid email').optional().or(z.literal('')),
+  email: z.string().trim().min(1, 'Email is required').email('Please enter a valid email'),
   phone: z.string().trim().max(32).optional().or(z.literal('')),
   amount: z.coerce
     .number({ message: 'Amount is required' })
